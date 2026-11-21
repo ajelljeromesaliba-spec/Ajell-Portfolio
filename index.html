@@ -18,7 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-v2.css">
-  <script src="script-v2.js" defer></script>
+  <style>html:not(.portfolio-js-ready) .reveal{opacity:1!important;transform:none!important}</style>
+  <script src="script-v2.js" defer onload="document.documentElement.classList.add('portfolio-js-ready')"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
