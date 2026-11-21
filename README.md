@@ -1,26 +1,33 @@
 # Ajell Saliba — Personal Portfolio
 
-A responsive static portfolio for job applications and selected client work. Built with HTML, CSS, and vanilla JavaScript. No build tooling, paid services, API keys, or external UI dependencies are required. Google Fonts are optional and gracefully fall back to system fonts.
+A responsive, static portfolio for job applications and selected client work, built with HTML, CSS, and vanilla JavaScript. No build dependencies, API keys, or environment variables are needed.
 
 ## Files
-- `index.html`: semantic content, SEO/Open Graph metadata, links, sections.
-- `styles.css`: dark design system, 3D-style CSS hero, responsive layouts, reduced-motion handling.
-- `script.js`: project filters, workflow stage tabs, mobile navigation, copy-email, scroll progress, scroll reveal, and pointer interaction.
-- `assets/Ajell_Saliba_Resume.pdf`: downloadable résumé.
-- `assets/favicon.svg`, `assets/og-cover.svg`: site identity and share preview.
 
-## Preview locally
-Run `python3 -m http.server 8080` from the project directory and visit `http://localhost:8080`.
+- `index.html`: homepage, project gallery, experience, contact and SEO metadata
+- `styles.css`: responsive design, animation, and reduced-motion support
+- `script.js`: mobile menu, project filters, interactive workflow, and copy-email action
+- `resume.html`: printable résumé; use the **Print / Save as PDF** button
+- `assets/favicon.svg`, `assets/og-cover.svg`: branding and social sharing preview
 
-## Deploy
-Upload the folder to a static host or deploy via Vercel using Framework Preset **Other**, Root Directory `/`, no build command and no output directory. `index.html` is the entry page.
+## Cloudflare Pages deployment (Git integration)
 
-## Checklist before public sharing
-1. Verify the public ConnectiveStack and Aleesa Talmadge URLs still work and that client work may be used in a public portfolio.
-2. Confirm the PDF résumé's contact details and exact dates are up to date.
-3. Replace the default meta preview URL with the final website URL if desired.
-4. Open in desktop and mobile browsers, test all links, tabs, email and résumé download.
+1. Open Cloudflare Dashboard > **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
+2. Authorize GitHub and select `ajelljeromesaliba-spec/Ajell-Portfolio`.
+3. Choose production branch `main`.
+4. Set **Framework preset: None**, **Build command: blank** (or `exit 0`), and **Build output directory: .** (repository root). Leave **Root directory (advanced)** empty.
+5. Choose **Save and Deploy**. Cloudflare will assign a `*.pages.dev` URL. Later pushes to `main` will trigger deployment automatically.
 
-No fake revenue metrics, fabricated results, or client records are published in the site.
-## Hosting
-Deploy the root of this repository as a static Cloudflare Pages project. Build command: leave blank; output directory: / (root). The primary branch is `main`.
+This portfolio is independent from the ConnectiveStack project and does not require a custom domain.
+
+## Local preview
+
+Run `python3 -m http.server 8080` from the repository root and open http://localhost:8080.
+
+## Preflight
+
+- Confirm that client project references may be published.
+- Test résumé print/save, mobile menu, project filters, and links.
+- Update the social preview URL after publishing if desired.
+
+No fictional client revenue or conversion claims are presented.
