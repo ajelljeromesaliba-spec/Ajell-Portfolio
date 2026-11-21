@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ajell-portfolio.ajelljeromesaliba.workers.dev/sitemap.xml
