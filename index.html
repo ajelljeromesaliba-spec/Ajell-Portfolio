@@ -22,6 +22,38 @@
   <link rel="preload" as="image" href="assets/hero-city.webp">
   <link rel="stylesheet" href="styles-v6.css">
   <script defer src="script-v6.js"></script>
+<style>
+  /* Testimonials: readable full-length feedback, no expensive blur or parallax. */
+  .testimonial-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.65fr);gap:clamp(32px,7vw,105px);align-items:end;margin-bottom:clamp(35px,5vw,70px)}
+  .testimonial-intro h2{font:600 clamp(56px,6vw,105px)/1.06 var(--display);letter-spacing:-.08em;margin:20px 0 0}
+  .testimonial-intro h2 em{font:italic 500 .94em var(--serif);color:var(--accent)}
+  .testimonial-intro>p{font:400 15px/1.85 var(--body);color:var(--muted);max-width:390px;margin:0 0 6px}
+  .testimonial-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.65fr);align-items:stretch;gap:16px}
+  .testimonial-feature,.reference-panel{border:1px solid rgba(179,214,224,.2);background:linear-gradient(125deg,#10232a,#09151a);position:relative;overflow:hidden}
+  .testimonial-feature{padding:clamp(28px,4.2vw,65px)}
+  .testimonial-meta{display:flex;align-items:center;justify-content:space-between;gap:25px;font:500 10px/1.6 var(--mono);letter-spacing:.1em;color:#c1d1d0}
+  .testimonial-stars{color:var(--accent);letter-spacing:4px;white-space:nowrap;font:600 18px var(--body)}
+  .testimonial-quote-mark{font:italic 500 clamp(85px,11vw,160px)/.7 var(--serif);color:var(--accent);opacity:.9;margin:35px 0 15px}
+  .testimonial-feature blockquote{margin:0;max-width:920px}
+  .testimonial-feature blockquote p{font:400 clamp(17px,1.7vw,23px)/1.75 var(--body);color:#e0ebe9;margin:0 0 22px;text-wrap:pretty}
+  .testimonial-feature blockquote p:last-child{margin-bottom:0}
+  .testimonial-author{border-top:1px solid rgba(187,222,222,.2);display:flex;align-items:center;gap:15px;margin-top:38px;padding-top:25px}
+  .testimonial-avatar{height:47px;width:47px;flex:none;border:1px solid var(--accent);display:grid;place-items:center;font:650 22px var(--serif);color:var(--accent)}
+  .testimonial-author>div{display:grid;gap:3px;flex:1}
+  .testimonial-author strong{font:650 17px var(--display);color:#e9f3f0}
+  .testimonial-author>div span{font:400 12px var(--body);color:var(--muted)}
+  .testimonial-verified{font:500 9px/1.4 var(--mono);color:var(--accent);letter-spacing:.12em}
+  .reference-panel{padding:clamp(25px,3.5vw,48px);display:flex;flex-direction:column;min-height:440px;background:linear-gradient(140deg,#0e1920,#101e23)}
+  .reference-top{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--accent);font:500 10px var(--mono);letter-spacing:.08em}
+  .reference-monogram{font:700 clamp(76px,10vw,150px)/1 var(--display);letter-spacing:-.12em;color:#d2e4e1;margin:auto 0 17px}
+  .reference-monogram span{color:var(--accent)}
+  .reference-panel h3{font:650 clamp(25px,3vw,36px)/1.1 var(--display);letter-spacing:-.05em;margin:0 0 13px}
+  .reference-role{font:500 14px/1.65 var(--body);color:#b6c9cc;margin:0 0 28px}
+  .reference-note{border-top:1px solid rgba(179,214,224,.17);padding-top:18px;font:400 12px/1.8 var(--body);color:var(--muted)}
+  .reference-footnote{margin-top:22px;font:500 9px/1.6 var(--mono);color:var(--accent);letter-spacing:.07em}
+  @media(max-width:950px){.testimonial-layout{grid-template-columns:1fr}.reference-panel{min-height:0}.reference-monogram{font-size:84px;margin:38px 0 12px}.testimonial-intro{grid-template-columns:1fr}}
+  @media(max-width:690px){.testimonial-intro h2{font-size:clamp(47px,12vw,70px)}.testimonial-feature{padding:25px 22px}.testimonial-meta{font-size:8px;gap:9px}.testimonial-stars{font-size:13px;letter-spacing:2px}.testimonial-quote-mark{font-size:94px;margin:32px 0 13px}.testimonial-feature blockquote p{font-size:16px;line-height:1.75}.testimonial-author{flex-wrap:wrap}.testimonial-verified{width:100%;padding-left:62px}.reference-panel{padding:25px}}
+</style>
 </head>
 <body>
   <a href="#about" class="skip-link">Skip to content</a>
@@ -30,14 +62,14 @@
   <header class="site-header" id="top">
     <a class="identity" href="#top" aria-label="Ajell Saliba, back to top"><span class="identity-mark">A<span class="slash">/</span>S</span><span class="identity-name">AJELL SALIBA <small>PERSONAL PORTFOLIO</small></span></a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Experience</a>
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a>
     </nav>
     <button class="motion-toggle" type="button" id="motionToggle" aria-label="Switch animation intensity" aria-pressed="false">MOTION <span id="motionLabel">FULL</span></button>
     <a class="nav-contact magnet" href="#contact"><span>Let's talk</span><span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
   </header>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" inert>
-    <a href="#about">01 / About</a><a href="#expertise">02 / Expertise</a><a href="#work">03 / Work</a><a href="#experience">04 / Experience</a><a href="#contact">05 / Contact</a>
+    <a href="#about">01 / About</a><a href="#expertise">02 / Expertise</a><a href="#work">03 / Work</a><a href="#experience">04 / Experience</a><a href="#reviews">05 / Reviews</a><a href="#contact">06 / Contact</a>
   </nav>
   <main>
     <div class="hero-track" id="heroTrack" aria-label="Cinematic introduction, scroll to explore">
@@ -186,7 +218,34 @@
       <details class="career"><summary><span class="career-period">2015 — 2020</span><span class="career-title"><b>Earlier BPO experience</b><small>TELUS, iQor, Teletech & Teleperformance</small></span><span class="career-expander">+</span></summary><p>Supported customers through technical troubleshooting, service enquiries and collections. Developed the support and escalation judgment later used in team leadership and client operations.</p></details>
     </div></div></section>
 
-    <section class="client-quote section-pad" aria-label="Client recommendation"><div class="layout-width client-quote-shell" data-reveal><div><span class="section-number">WORDS FROM A CLIENT</span><h2>Quality gets<br><em>noticed.</em></h2></div><figure><blockquote>“Ajell was an outstanding freelancer who consistently demonstrated dedication, professionalism, and a strong work ethic.”</blockquote><figcaption><strong>Alfred</strong><span>ProClick · Upwork client review excerpt</span></figcaption></figure></div></section>
+    <section class="client-quote section-pad" id="reviews" aria-labelledby="reviewsHeading">
+      <div class="layout-width testimonial-intro" data-reveal>
+        <div>
+          <span class="section-number">CLIENT FEEDBACK / PROFESSIONAL REFERENCES</span>
+          <h2 id="reviewsHeading">What people<br><em>have said.</em></h2>
+        </div>
+        <p>Feedback from people I've worked with. The complete Upwork review below is reproduced from the client's own words, not rewritten into marketing copy.</p>
+      </div>
+      <div class="layout-width testimonial-layout">
+        <article class="testimonial-feature" data-reveal>
+          <div class="testimonial-meta"><span class="testimonial-overline">UPWORK CLIENT REVIEW · PROCLICK</span><span class="testimonial-stars" aria-label="Five out of five stars">★★★★★</span></div>
+          <div class="testimonial-quote-mark" aria-hidden="true">“</div>
+          <blockquote>
+            <p>Ajell was an outstanding freelancer who consistently demonstrated dedication, professionalism, and a strong work ethic. He started as a Customer Service Agent and, through his hard work, commitment, and excellent performance, earned a well-deserved promotion to Team Leader.</p>
+            <p>Throughout his time with the company, Ajell proved that he was not only capable of delivering excellent results but also had the leadership skills needed to guide and support others. He showed initiative, took responsibility for his tasks, and maintained a positive attitude even when facing challenges.</p>
+          </blockquote>
+          <div class="testimonial-author"><span class="testimonial-avatar" aria-hidden="true">A</span><div><strong>Alfred</strong><span>Owner, ProClick · 5-star Upwork review</span></div><span class="testimonial-verified">CLIENT FEEDBACK</span></div>
+        </article>
+        <aside class="reference-panel" data-reveal aria-label="Additional approved professional recommendation">
+          <div class="reference-top"><span>PROFESSIONAL REFERENCE</span><span aria-hidden="true">↗</span></div>
+          <div class="reference-monogram" aria-hidden="true">NJ<span>.</span></div>
+          <h3>Nathan Justice</h3>
+          <p class="reference-role">Senior Account Manager<br>AI Acquisition</p>
+          <p class="reference-note">Professional recommendation approved. The exact written endorsement is not reproduced here until its original wording can be confirmed.</p>
+          <span class="reference-footnote">APPROVED RECOMMENDATION · NO ALTERED QUOTES</span>
+        </aside>
+      </div>
+    </section>
 
     <div class="noir-track" id="noirTrack">
     <section class="editorial-break" aria-labelledby="editorialHeading">
@@ -196,7 +255,7 @@
     </section>
     </div><!-- /noir track -->
 
-    <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">06 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
+    <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">07 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
   </main>
   <footer class="footer"><div class="layout-width footer-inner"><a href="#top" class="footer-brand">A<span>/</span>S</a><p>© <span id="year">2026</span> AJELL SALIBA. PERSONAL PORTFOLIO.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div></footer>
   <div class="site-toast" id="siteToast" role="status" aria-live="polite"></div>
