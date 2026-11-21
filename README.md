@@ -1,33 +1,21 @@
-# Ajell Saliba — Personal Portfolio
+# Ajell Saliba — Portfolio v2
 
-A responsive, static portfolio for job applications and selected client work, built with HTML, CSS, and vanilla JavaScript. No build dependencies, API keys, or environment variables are needed.
+A premium, responsive portfolio for web implementation, GoHighLevel automation, and client operations.
 
-## Files
+- Static HTML, CSS and vanilla JavaScript; no build step or packages.
+- Original WebGL raymarched rotating 3D chrome orbital sculpture, no external shader libraries.
+- Graceful CSS 3D fallback for clients without WebGL, reduced-motion support.
+- Scroll reveals, kinetic typography, animated ticker, project treatments, responsive mobile menu.
+- Public project links, factual work-history and professional résumé.
 
-- `index.html`: homepage, project gallery, experience, contact and SEO metadata
-- `styles.css`: responsive design, animation, and reduced-motion support
-- `script.js`: mobile menu, project filters, interactive workflow, and copy-email action
-- `resume.html`: printable résumé; use the **Print / Save as PDF** button
-- `assets/favicon.svg`, `assets/og-cover.svg`: branding and social sharing preview
+## Cloudflare deployment
 
-## Cloudflare Pages deployment (Git integration)
+**If you use Cloudflare Pages Git integration:** select this GitHub repository, branch `main`, framework preset **None**, build command blank, build output directory `.`.
 
-1. Open Cloudflare Dashboard > **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
-2. Authorize GitHub and select `ajelljeromesaliba-spec/Ajell-Portfolio`.
-3. Choose production branch `main`.
-4. Set **Framework preset: None**, **Build command: blank** (or `exit 0`), and **Build output directory: .** (repository root). Leave **Root directory (advanced)** empty.
-5. Choose **Save and Deploy**. Cloudflare will assign a `*.pages.dev` URL. Later pushes to `main` will trigger deployment automatically.
+**If you use Cloudflare Workers Builds:** configure static assets with `wrangler.jsonc` (or point Workers build output at `./`) and ensure the build deploys the root directory. The repository is static and does not require npm.
 
-This portfolio is independent from the ConnectiveStack project and does not require a custom domain.
+The repo is separate from ConnectiveStack. HTTPS URL will be assigned by Cloudflare upon successful deployment.
 
-## Local preview
+### Workers Builds static assets (workers.dev)
 
-Run `python3 -m http.server 8080` from the repository root and open http://localhost:8080.
-
-## Preflight
-
-- Confirm that client project references may be published.
-- Test résumé print/save, mobile menu, project filters, and links.
-- Update the social preview URL after publishing if desired.
-
-No fictional client revenue or conversion claims are presented.
+The included `wrangler.jsonc` names the Worker `ajell-portfolio` to match the current workers.dev deployment, and serves the static site at the repository root. If the project is Git-connected with Workers Builds, ensure the deploy command is `npx wrangler deploy` (framework preset is **None**). This config does not touch ConnectiveStack.
