@@ -3,121 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b0d">
-  <meta name="description" content="Ajell Saliba / Web Implementation & CRM Automation Specialist. Websites, connected systems, client operations. Built to work beyond the mockup.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Ajell Saliba. Web implementation, CRM automation, quality assurance and client operations. A personal portfolio built around the work and the people behind it.">
   <meta name="author" content="Ajell Saliba">
-  <link rel="canonical" href="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
-  <meta property="og:url" content="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ajell Saliba / Building What Works">
-  <meta property="og:description" content="Web implementation, CRM automation, and client operations. Explore selected projects and experience.">
+  <meta property="og:title" content="Ajell Saliba | Websites, Systems & Client Operations">
+  <meta property="og:description" content="Web implementation. CRM automation. Quality assurance. Client operations.">
   <meta property="og:image" content="https://ajell-portfolio.ajelljeromesaliba.workers.dev/assets/og-cover.svg">
-  <title>Ajell Saliba® / Building What Works</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:url" content="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
+  <title>Ajell Saliba | Personal Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v2.css">
-  <style>html:not(.portfolio-js-ready) .reveal{opacity:1!important;transform:none!important}</style>
-  <script src="script-v2.js" defer onload="document.documentElement.classList.add('portfolio-js-ready')"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-city.webp">
+  <link rel="stylesheet" href="styles-v4.css">
+  <script defer src="script-v4.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="reading-bar" aria-hidden="true"></div>
-  <div class="ambient-bg" aria-hidden="true"></div>
+  <a href="#about" class="skip-link">Skip to content</a>
+  <div class="reading-line" aria-hidden="true"></div>
+  <div class="cursor-aura" aria-hidden="true"></div>
   <header class="site-header" id="top">
-    <a href="#top" class="brand" aria-label="Ajell Saliba, home"><span class="brand-mark">a<span class="mark-dot">.</span></span><span class="brand-word">AJELL <span>SALIBA</span><sup>®</sup></span></a>
-    <nav class="nav-links" aria-label="Primary navigation"><a href="#work">WORK <span>01</span></a><a href="#expertise">EXPERTISE <span>02</span></a><a href="#about">ABOUT <span>03</span></a></nav>
-    <a class="nav-contact magnetic" href="mailto:ajellsaliba@gmail.com?subject=Let's%20work%20together">LET'S TALK <span aria-hidden="true">↗</span></a>
-    <button class="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#work">SELECTED WORK <span>01</span></a><a href="#expertise">EXPERTISE <span>02</span></a><a href="#about">ABOUT <span>03</span></a><a href="#contact">CONTACT <span>04</span></a></nav>
+    <a class="identity" href="#top" aria-label="Ajell Saliba, back to top"><span class="identity-mark">A<span class="slash">/</span>S</span><span class="identity-name">AJELL SALIBA <small>PERSONAL PORTFOLIO</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Experience</a>
+    </nav>
+    <a class="nav-contact magnet" href="#contact"><span>Let's talk</span><span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
   </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-gridline" aria-hidden="true"></div>
-      <div class="hero-main">
-        <div class="hero-copy">
-          <div class="hero-eyebrow anim-enter"><span class="availability-dot"></span> <span>AVAILABLE FOR REMOTE WORK</span> <i></i><span class="eyebrow-location">PHILIPPINES / WORLDWIDE</span></div>
-          <h1 class="hero-headline" id="hero-title">
-            <div class="hero-title-line anim-enter delay-1"><span>I MAKE</span></div>
-            <div class="hero-title-line outline-line anim-enter delay-2"><span>DIGITAL</span></div>
-            <div class="hero-title-line last-line anim-enter delay-3"><span>SYSTEMS</span><span class="title-asterisk" aria-hidden="true">✳</span></div>
-            <div class="hero-title-line work-line anim-enter delay-4"><span>WORK<span class="period">.</span></span></div>
-          </h1>
-          <div class="hero-bottom anim-enter delay-5">
-            <p class="hero-intro">I'm <strong>Ajell Saliba.</strong> I build websites, connect the systems behind them, and make sure the final thing actually works.</p>
-            <a href="#work" class="discover-link" aria-label="Explore selected work"><span class="disc-circle">↘</span><span>EXPLORE THE WORK</span></a>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" inert>
+    <a href="#about">01 / About</a><a href="#expertise">02 / Expertise</a><a href="#work">03 / Work</a><a href="#experience">04 / Experience</a><a href="#contact">05 / Contact</a>
+  </nav>
+  <main>
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero-photo" aria-hidden="true"><img src="assets/hero-city.webp" alt="" width="1578" height="888" fetchpriority="high" decoding="async"></div>
+      <div class="hero-darkening" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-side-index" aria-hidden="true">01 / 05 &nbsp; • &nbsp; PORTFOLIO</div>
+      <div class="hero-copy">
+        <p class="micro hero-kicker"><span class="signal-dot"></span> INDEPENDENT PROFESSIONAL · PHILIPPINES</p>
+        <h1 id="heroHeading">Ajell<br><em>Saliba.</em></h1>
+        <div class="hero-statement"><span class="short-rule"></span><div><p>Web implementation.</p><p>CRM automation.</p><p>Client operations.</p></div></div>
+        <p class="hero-lede">I bring websites, workflows and teams together. From a working build to the details that make it reliable.</p>
+        <div class="hero-actions"><a href="#work" class="button button-primary magnet"><span>Explore my work</span><span aria-hidden="true">↗</span></a><a href="#contact" class="button button-outline magnet">Get in touch <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-bottom"><div class="hero-breadcrumb"><span class="tiny-pip"></span> AVAILABLE FOR REMOTE OPPORTUNITIES</div><a href="#about" class="scroll-cue">SCROLL TO DISCOVER <span>↓</span></a><div class="hero-frame-mark">2026 / SELECTED WORK</div></div>
+    </section>
+    <div class="marquee-band" aria-label="Website implementation, automation, quality assurance, and operations"><div class="marquee-inner" aria-hidden="true"><span>IMPLEMENT</span><b>✳</b><span>CONNECT</span><b>✳</b><span>TEST</span><b>✳</b><span>DELIVER</span><b>✳</b><span>IMPLEMENT</span><b>✳</b><span>CONNECT</span><b>✳</b><span>TEST</span><b>✳</b><span>DELIVER</span><b>✳</b></div></div>
+
+    <section class="section-intro section-pad" id="about">
+      <div class="layout-width about-layout">
+        <div class="section-side"><span class="section-number">01 / ABOUT</span><span class="vertical-rule"></span><p>THE PERSON<br>BEHIND THE BUILD</p></div>
+        <div class="about-primary" data-reveal>
+          <span class="eyebrow">BUILT THROUGH EXPERIENCE</span>
+          <h2>I care about the<br><em>part that works.</em></h2>
+          <p class="about-summary">I'm Ajell. I build websites with AI-assisted tools, connect the systems behind them and check that the entire experience works when someone actually uses it.</p>
+          <p class="about-secondary">My background started in customer support, moved into team leadership and quality assurance, then into web implementation and automation. That mix lets me understand both the technical work and the people relying on it.</p>
+        </div>
+        <div class="about-signature" data-reveal><div class="signature-lines"><i></i><i></i><i></i></div><span>CURIOUS BY DEFAULT.<br>ACCOUNTABLE BY DESIGN.</span></div>
+      </div>
+      <div class="layout-width metric-row" data-reveal>
+        <div class="metric"><strong>11<span>+</span></strong><p>Years across customer support,<br>sales, QA and delivery</p></div>
+        <div class="metric"><strong>4<span>+</span></strong><p>Years of hands-on<br>GoHighLevel experience</p></div>
+        <div class="metric"><strong>6,381</strong><p>Client records reviewed<br>in management support</p></div>
+      </div>
+    </section>
+
+    <section class="expertise section-pad" id="expertise">
+      <div class="layout-width">
+        <div class="section-heading" data-reveal><div><span class="section-number">02 / EXPERTISE</span><h2>Different skills.<br><em>One standard.</em></h2></div><p>From what a client sees to what happens after they click. These are the areas I work across.</p></div>
+        <div class="expertise-grid">
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">01 <span>↗</span></span><div class="icon-display web-icon" aria-hidden="true"><span>&lt;/&gt;</span><i></i></div><h3>Web<br>implementation</h3><p>Landing pages, responsive websites, forms, domain setup, DNS, SSL, SEO basics and deployments.</p><div class="skill-tags">VERCEL <span>·</span> CLOUDFLARE <span>·</span> LOVABLE</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">02 <span>↗</span></span><div class="icon-display crm-icon" aria-hidden="true"><i></i><i></i><i></i></div><h3>CRM &<br>automation</h3><p>GoHighLevel pipelines, calendars, lead routing, automated follow-ups, webhooks and connected tools.</p><div class="skill-tags">GOHIGHLEVEL <span>·</span> API <span>·</span> ZAPIER</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">03 <span>↗</span></span><div class="icon-display qa-icon" aria-hidden="true"><span>✓</span><i></i></div><h3>Quality &<br>client operations</h3><p>Onboarding checks, account audits, calendar connections, delivery blockers and task reviews.</p><div class="skill-tags">QA <span>·</span> CLIENT DELIVERY <span>·</span> AUDITS</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">04 <span>↗</span></span><div class="icon-display support-icon" aria-hidden="true"><b>◉</b><i>◉</i></div><h3>Customer support<br>& leadership</h3><p>Customer service, Shopify and Amazon operations, escalations, retention and team quality.</p><div class="skill-tags">SHOPIFY <span>·</span> ZENDESK <span>·</span> TEAM LEAD</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="systems-story section-pad" id="systems">
+      <div class="layout-width"><div class="section-heading system-heading" data-reveal><div><span class="section-number">HOW I APPROACH A PROJECT</span><h2>Build something.<br><em>Make it work.</em></h2></div><p>The interaction below shows how I think about an implementation from the first goal to the final quality check.</p></div></div>
+      <div class="layout-width systems-layout">
+        <div class="systems-photo-wrap" data-reveal>
+          <div class="systems-photo"><img src="assets/systems-touch.webp" alt="Cinematic illustration of Ajell engaging with an interface of connected digital systems" width="880" height="1100" loading="lazy" decoding="async"><div class="systems-photo-overlay"></div></div>
+          <div class="floating-label floating-label-top" aria-hidden="true"><span class="live-pulse"></span> A SYSTEM OF CONNECTED PARTS</div>
+          <div class="floating-label floating-label-bottom" aria-hidden="true"><span>01</span><span class="connection-bar"><i></i></span><span>04</span></div>
+          <p class="image-disclaimer">AI-assisted editorial illustration · workflow below is interactive</p>
+        </div>
+        <div class="workflow-module" data-reveal>
+          <div class="workflow-head"><span>INTERACTIVE WORKFLOW</span><span class="status-dot">SELECT A STAGE</span></div>
+          <div class="workflow-stages" role="tablist" aria-label="Implementation workflow stages">
+            <button class="flow-step active" type="button" role="tab" aria-selected="true" aria-controls="flowPanel" data-stage="0"><span class="step-index">01</span><span>Define</span><span class="step-arrow">↗</span></button>
+            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="1"><span class="step-index">02</span><span>Build</span><span class="step-arrow">↗</span></button>
+            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="2"><span class="step-index">03</span><span>Connect</span><span class="step-arrow">↗</span></button>
+            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="3"><span class="step-index">04</span><span>Verify</span><span class="step-arrow">↗</span></button>
           </div>
-        </div>
-        <div class="hero-scene" aria-label="Animated interactive three-dimensional digital sculpture">
-          <div class="scene-glow" aria-hidden="true"></div>
-          <div class="scene-grid" aria-hidden="true"></div>
-          <div class="hero-ring-back" aria-hidden="true"></div>
-          <canvas id="hero-canvas" aria-hidden="true"></canvas>
-          <div class="scene-fallback" aria-hidden="true"><div class="fallback-loop one"></div><div class="fallback-loop two"></div><div class="fallback-core">AS</div></div>
-          <div class="scene-corner scene-top"><span>FIG 01 / THE SYSTEM</span><span>REAL-TIME 3D</span></div>
-          <div class="scene-corner scene-bottom"><span class="live-pulse"></span><span>BUILD → CONNECT → TEST</span><span class="scene-crosshair">⊕</span></div>
-          <div class="scene-edge-number" aria-hidden="true">01 / 04</div>
+          <div class="flow-detail" id="flowPanel" role="tabpanel" aria-live="polite" tabindex="0"><div class="flow-detail-eyebrow">STAGE <span id="stageNo">01</span> / 04</div><h3 id="stageTitle">Start with the outcome.</h3><p id="stageDesc">Define who the experience is for, what needs to happen next, and which systems must support it.</p><div class="flow-output"><span>EXPECTED OUTPUT</span><strong id="stageOutput">A clear path from visitor to action.</strong></div></div>
+          <div class="flow-visual" aria-label="Workflow progress visualization"><div class="flow-visual-track"><span class="flow-progress" id="flowProgress"></span></div><div class="flow-visual-labels"><span>BRIEF</span><span>LIVE SYSTEM</span></div></div>
+          <button type="button" class="next-stage" id="nextStage">NEXT STAGE <span aria-hidden="true">↗</span></button>
         </div>
       </div>
-      <div class="hero-ticker" aria-label="Areas of experience"><div class="ticker-track"><span>WEB IMPLEMENTATION</span><b>✳</b><span>CRM AUTOMATION</span><b>✳</b><span>QUALITY ASSURANCE</span><b>✳</b><span>CLIENT OPERATIONS</span><b>✳</b><span>WEB IMPLEMENTATION</span><b>✳</b><span>CRM AUTOMATION</span><b>✳</b><span>QUALITY ASSURANCE</span><b>✳</b><span>CLIENT OPERATIONS</span><b>✳</b></div></div>
     </section>
 
-    <section class="intro-statement container section-padding" aria-labelledby="statement-title">
-      <div class="section-overline reveal"><span class="section-no">/ WHO I AM</span><span class="section-fine">STRATEGY / IMPLEMENTATION / DELIVERY</span></div>
-      <div class="statement-grid">
-        <h2 id="statement-title" class="statement-copy reveal">A GOOD WEBSITE<br>SHOULD DO <em>MORE</em><br>THAN LOOK GOOD<span class="acid-dot">.</span></h2>
-        <div class="statement-aside reveal"><span class="shimmer-star" aria-hidden="true">✳</span><p>The page is only the beginning. I take projects from first build to functioning workflows, CRM connections, deployment, and the quality checks that keep everything moving.</p><a class="inline-arrow" href="#expertise">WHAT I BRING TO A TEAM <span>↗</span></a></div>
-      </div>
-      <div class="metrics-grid reveal">
-        <div class="metric"><span class="metric-kicker">EXPERIENCE</span><strong data-count="11">11<span>+</span></strong><p>Years across support, QA, sales & client delivery</p></div>
-        <div class="metric"><span class="metric-kicker">PLATFORMS</span><strong data-count="4">4<span>+</span></strong><p>Years of hands-on GoHighLevel experience</p></div>
-        <div class="metric"><span class="metric-kicker">OPERATIONS</span><strong data-count="6381">6,381</strong><p>Client records reviewed for management support</p></div>
-      </div>
+    <section class="work section-pad" id="work">
+      <div class="layout-width"><div class="section-heading" data-reveal><div><span class="section-number">03 / SELECTED WORK</span><h2>Proof is in<br><em>the execution.</em></h2></div><p>Selected public work and real areas of responsibility. No private client records or invented performance numbers.</p></div>
+      <div class="work-filters" aria-label="Filter work"><button class="work-filter active" type="button" data-filter="all" aria-pressed="true">All work <span>04</span></button><button class="work-filter" type="button" data-filter="build" aria-pressed="false">Build</button><button class="work-filter" type="button" data-filter="automation" aria-pressed="false">Automation</button><button class="work-filter" type="button" data-filter="operations" aria-pressed="false">Operations</button></div>
+      <div class="work-grid" id="workGrid">
+        <article class="project-tile project-featured tilt-card" data-category="build" data-reveal><div class="project-art art-stack" aria-hidden="true"><div class="browser-chrome"><div class="chrome-dots"><i></i><i></i><i></i></div><span>CONNECTIVESTACK / SELECTED DEMOS</span></div><div class="site-preview-mark">YOU OWN<br><em>WHAT WE BUILD.</em></div><div class="site-preview-ui"><span>01 / VISIT</span><span>02 / CONNECT</span><span>03 / BOOK</span></div></div><div class="project-copy"><span class="project-type">01 / INDEPENDENT PROJECT</span><h3>ConnectiveStack</h3><p>My independent build portfolio: website experiences, interactive demos and connected lead-handling concepts across industries.</p><a class="project-link" href="https://connectivestack.com" target="_blank" rel="noopener noreferrer" aria-label="Open ConnectiveStack in new tab">VIEW PUBLIC PROJECT <span>↗</span></a></div></article>
+        <article class="project-tile tilt-card" data-category="build" data-reveal><div class="project-art art-web" aria-hidden="true"><div class="art-web-title">BUILD / LAUNCH</div><div class="art-web-bars"><i></i><i></i><i></i><i></i></div><div class="art-web-pills"><span>DESIGN</span><span>DEPLOY</span><span>TEST</span></div></div><div class="project-copy"><span class="project-type">02 / CLIENT IMPLEMENTATIONS</span><h3>Web delivery</h3><p>Built and deployed websites and landing pages, configured domains, and tested forms and booking journeys before handoff.</p><span class="project-private">CLIENT-SPECIFIC WORK / DETAILS AVAILABLE ON REQUEST</span></div></article>
+        <article class="project-tile tilt-card" data-category="automation" data-reveal><div class="project-art art-flow" aria-hidden="true"><div class="art-flow-node">WEB FORM</div><i class="art-flow-line"></i><div class="art-flow-node accent">CRM ROUTING</div><i class="art-flow-line"></i><div class="art-flow-node">FOLLOW-UP</div></div><div class="project-copy"><span class="project-type">03 / CONNECTED SYSTEMS</span><h3>CRM workflows</h3><p>Hands-on work with GoHighLevel pipelines, calendar integrations, lead routing, webhooks and automated follow-up.</p><span class="project-private">WORKFLOW EXAMPLE / PRIVATE CLIENT ACCOUNTS EXCLUDED</span></div></article>
+        <article class="project-tile tilt-card" data-category="operations" data-reveal><div class="project-art art-data" aria-hidden="true"><span>DELIVERY AUDIT</span><strong>6,381</strong><div class="art-data-rule"></div><div class="data-labels"><span>ONBOARDING</span><span>CALENDARS</span><span>BLOCKERS</span></div></div><div class="project-copy"><span class="project-type">04 / QUALITY ASSURANCE</span><h3>Operations review</h3><p>Reviewed 6,381 client records and checked onboarding handoffs, sales calendars, task ownership and outstanding blockers.</p><span class="project-private">AGGREGATED WORK SCOPE / NO CLIENT RECORDS SHOWN</span></div></article>
+      </div></div>
     </section>
 
-    <section id="work" class="work-section section-padding" aria-labelledby="work-title">
-      <div class="container">
-        <div class="section-overline reveal"><span class="section-no">/ 01 / SELECTED WORK</span><span class="section-fine">A SELECTION OF BUILDS & DELIVERY WORK</span></div>
-        <div class="work-heading reveal"><h2 id="work-title">NOT JUST <em>IDEAS.</em><br>ACTUAL WORK<span class="acid-dot">.</span></h2><p>Web implementations, connected workflows, and the less glamorous details that make them reliable.</p></div>
-        <div class="work-list">
-          <article class="case case-primary reveal">
-            <a class="case-visual cs-visual" href="https://connectivestack.com" target="_blank" rel="noopener noreferrer" aria-label="Open ConnectiveStack website">
-              <div class="case-number">PROJECT / 001</div><div class="cs-mock-browser"><div class="mock-bar"><span class="mock-dot"></span><span>CONNECTIVESTACK.COM</span><span>↗</span></div><div class="cs-mock-inner"><div class="cs-mock-logo">CONNECTIVE<span>STACK</span></div><div class="cs-mock-type">YOU OWN<br>WHAT WE <em>BUILD.</em></div><div class="mock-sub">CUSTOM AI SYSTEMS & HIGH-CONVERTING EXPERIENCES</div><div class="mock-button">EXPLORE SYSTEMS <span>↗</span></div></div><div class="cs-mock-globe"><div class="globe-r"><i></i></div></div></div><div class="visual-corner-tag">INDEPENDENT PROJECT <span>↗</span></div>
-            </a>
-            <div class="case-description"><div class="case-meta"><span>01 / WEB + AI DEMOS</span><span>2026</span></div><h3>ConnectiveStack <span>↗</span></h3><p>My independent project: a marketing website and interactive demo experiences for HVAC, luxury real estate, and healthcare. Lead capture, booking flows, and AI use cases built into the experience.</p><div class="case-chips"><span>WEB IMPLEMENTATION</span><span>AI DEMOS</span><span>DEPLOYMENT</span></div></div>
-          </article>
-          <article class="case case-secondary reveal">
-            <a class="case-visual al-visual" href="https://aleesatalmadge.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Aleesa Talmadge website"><div class="case-number">PROJECT / 002</div><div class="al-art"><span class="al-art-kicker">FRACTIONAL CMO · AI WORKFORCE</span><div class="al-orbit al-orbit-one"></div><div class="al-orbit al-orbit-two"></div><div class="al-orbit al-orbit-three"></div><div class="al-title">Strategy<br>meets <i>scale.</i></div><div class="al-pill">VIEW THE LIVE BUILD ↗</div></div><div class="visual-corner-tag">CLIENT WEBSITE <span>↗</span></div></a>
-            <div class="case-description"><div class="case-meta"><span>02 / WEBSITE IMPLEMENTATION</span><span>2026</span></div><h3>Aleesa Talmadge <span>↗</span></h3><p>A live website for fractional CMO and AI workforce services. Responsive layouts, structured messaging, and deployment. The visual shown here is an illustrative treatment, not a screenshot.</p><div class="case-chips"><span>CLIENT WEBSITE</span><span>VERCEL</span><span>RESPONSIVE</span></div></div>
-          </article>
-          <article class="case case-tertiary reveal">
-            <div class="case-visual ops-visual"><div class="case-number">PROJECT / 003</div><div class="ops-dashboard"><div class="ops-top"><span>OPERATIONAL REVIEW / SNAPSHOT</span><span class="ops-indicator">● VERIFIED DATA</span></div><div class="ops-value">6,381<span>CLIENT RECORDS REVIEWED</span></div><div class="ops-row"><span>ONBOARDING HANDOFFS</span><span class="row-track"><i style="width:78%"></i></span><b>CHECKED</b></div><div class="ops-row"><span>SALES CALENDAR CONNECTIONS</span><span class="row-track"><i style="width:65%"></i></span><b>CHECKED</b></div><div class="ops-row"><span>DELIVERY BLOCKERS</span><span class="row-track"><i style="width:43%"></i></span><b>FLAGGED</b></div><div class="ops-foot">ILLUSTRATIVE DISPLAY OF ACTUAL WORK AREAS</div></div><div class="visual-corner-tag">OPERATIONS / QA <span>✳</span></div></div>
-            <div class="case-description"><div class="case-meta"><span>03 / QA + DELIVERY</span><span>2025/26</span></div><h3>Behind the launch <span>✳</span></h3><p>Reviewed 6,381 client records at AI Acquisition, checking onboarding handoffs, calendars, ownership, and overdue delivery tasks. Client account information stays private.</p><div class="case-chips"><span>MANAGEMENT SUPPORT</span><span>QUALITY ASSURANCE</span><span>CRM AUDITS</span></div></div>
-          </article>
-        </div>
-        <div class="work-note reveal"><span>✳</span> Public links go to live projects. Visual treatments are illustrative; private client dashboards and data are not shown.</div>
-      </div>
+    <section class="experience section-pad" id="experience"><div class="layout-width experience-layout"><div class="experience-head" data-reveal><span class="section-number">04 / EXPERIENCE</span><h2>Built on<br><em>real work.</em></h2><p>11 years moving from customer support into leadership, connected systems and client delivery.</p><a href="resume-v2.html" class="inline-link">VIEW FULL RÉSUMÉ <span>↗</span></a></div><div class="career-list" data-reveal>
+      <details class="career" open><summary><span class="career-period">2025 — 2026</span><span class="career-title"><b>AI Acquisition</b><small>Web & AI Automation Specialist / Management Support</small></span><span class="career-expander">+</span></summary><p>Website and landing page builds, API/webhook integrations, Cloudflare DNS and deployments, GoHighLevel connections, onboarding audits and management support.</p></details>
+      <details class="career"><summary><span class="career-period">2022 — 2025</span><span class="career-title"><b>ProClick</b><small>Team Lead / GoHighLevel Specialist</small></span><span class="career-expander">+</span></summary><p>Team quality reviews, Shopify and Amazon customer operations, CRM setup, funnels, pipelines, calendars and follow-up workflows.</p></details>
+      <details class="career"><summary><span class="career-period">2020 — 2022</span><span class="career-title"><b>Transparent BPO</b><small>Sales, QA & Virtual Assistance</small></span><span class="career-expander">+</span></summary><p>Outbound sales, customer communications, CRM record updates and quality assurance across remote client work.</p></details>
+      <details class="career"><summary><span class="career-period">2015 — 2020</span><span class="career-title"><b>Earlier BPO experience</b><small>TELUS, iQor, Teletech & Teleperformance</small></span><span class="career-expander">+</span></summary><p>Frontline technical support, customer service and collections, forming the foundation for later work in leadership and delivery.</p></details>
+    </div></div></section>
+
+    <section class="editorial-break" aria-labelledby="editorialHeading">
+      <div class="editorial-image" aria-hidden="true"><img src="assets/rain-editorial.webp" alt="" loading="lazy" decoding="async" width="880" height="1100"></div>
+      <div class="editorial-gradient" aria-hidden="true"></div><div class="editorial-grain" aria-hidden="true"></div>
+      <div class="layout-width editorial-content" data-reveal><span class="section-number">THE MINDSET / THE STANDARD</span><h2 id="editorialHeading">The details<br>make the <em>difference.</em></h2><p>What matters is what happens after launch. Does the form work? Does the contact reach the right place? Is the client handoff clear? That's where I pay attention.</p><div class="editorial-bottom"><span>AN APPROACH BUILT ON FOLLOW-THROUGH</span><span>05 / 05</span></div></div>
     </section>
 
-    <section id="expertise" class="expertise-section section-padding" aria-labelledby="expertise-title">
-      <div class="container"><div class="section-overline reveal"><span class="section-no">/ 02 / MY EXPERTISE</span><span class="section-fine">FROM THE FIRST BRIEF TO FINAL QA</span></div><div class="expertise-head reveal"><h2 id="expertise-title">THE PARTS<br>BETWEEN <em>THE PARTS.</em></h2><p>I work in the overlap between websites, CRMs, automations, and the people responsible for delivering them.</p></div>
-      <div class="expertise-grid">
-        <article class="expertise-card reveal"><div class="skill-top"><span>01</span><span class="skill-symbol">⌘</span></div><h3>Web implementation</h3><p>AI-assisted website builds, landing pages, domains, DNS, SSL, form testing, deployment, technical SEO.</p><div class="skill-tags">VERCEL / CLOUDFLARE / GITHUB / LOVABLE</div></article>
-        <article class="expertise-card reveal"><div class="skill-top"><span>02</span><span class="skill-symbol">⟳</span></div><h3>CRM & automation</h3><p>GoHighLevel pipelines, forms, booking calendars, lead routing, automated follow-ups, APIs, and webhooks.</p><div class="skill-tags">GOHIGHLEVEL / ZAPIER / REST API</div></article>
-        <article class="expertise-card reveal"><div class="skill-top"><span>03</span><span class="skill-symbol">✳</span></div><h3>QA & client delivery</h3><p>Onboarding handoffs, ownership checks, calendar connection audits, task reviews, and delivery issue tracking.</p><div class="skill-tags">AUDITS / MANAGEMENT SUPPORT / QA</div></article>
-        <article class="expertise-card reveal"><div class="skill-top"><span>04</span><span class="skill-symbol">↗</span></div><h3>Customer operations</h3><p>Shopify and Amazon support, Zendesk, escalations, quality reviews, and team leadership.</p><div class="skill-tags">SHOPIFY / ZENDESK / TEAM LEAD</div></article>
-      </div>
-      <div class="tool-band reveal"><div>PART OF THE TOOLBOX</div><div>GHL&nbsp; / &nbsp;VAPI&nbsp; / &nbsp;SUPABASE&nbsp; / &nbsp;RESEND&nbsp; / &nbsp;WORDPRESS&nbsp; / &nbsp;GITHUB&nbsp; / &nbsp;VERCEL&nbsp; / &nbsp;CLOUDFLARE</div></div>
-      </div>
-    </section>
-
-    <section id="about" class="about-section section-padding" aria-labelledby="about-title"><div class="container"><div class="section-overline reveal"><span class="section-no">/ 03 / EXPERIENCE</span><span class="section-fine">THE LONG WAY AROUND / ON PURPOSE</span></div><div class="about-grid"><div class="about-left reveal"><h2 id="about-title">BUILT BY<br><em>EXPERIENCE.</em></h2><p>I started on the frontline, moved into team leadership, and then into technical delivery. That combination makes me comfortable with both the systems and the people who use them.</p><a class="resume-link" href="resume-v2.html" target="_blank" rel="noopener">VIEW MY FULL RÉSUMÉ <span>↗</span></a><a class="resume-small" href="resume-v2.html" target="_blank" rel="noopener">PRINT / SAVE RÉSUMÉ AS PDF ↗</a></div><div class="career-list reveal"><div class="career-item"><div class="career-date">2025 / 2026</div><div><h3>Web & AI Automation Specialist<br><span>Management Support</span></h3><p>AI Acquisition</p></div><span class="career-plus">↗</span></div><div class="career-item"><div class="career-date">2022 / 2025</div><div><h3>Team Lead<br><span>GoHighLevel Specialist</span></h3><p>ProClick</p></div><span class="career-plus">↗</span></div><div class="career-item"><div class="career-date">2020 / 2022</div><div><h3>Sales, QA & Virtual Assistance</h3><p>Transparent BPO</p></div><span class="career-plus">↗</span></div><div class="career-item"><div class="career-date">2015 / 2020</div><div><h3>Technical & Customer Support</h3><p>TELUS · iQor · Teletech · Teleperformance</p></div><span class="career-plus">↗</span></div></div></div>
-      <div class="testimonial reveal"><div class="test-head"><span>WORDS FROM A CLIENT</span><span>UPWORK REVIEW / PROCLICK</span></div><blockquote>“Ajell was an outstanding freelancer who consistently demonstrated dedication, professionalism, and a strong work ethic.”</blockquote><div class="test-bottom"><div><span class="test-avatar">A</span><div><b>Alfred</b><span>ProClick client</span></div></div><span>5-STAR CLIENT REVIEW</span></div></div></div>
-    </section>
-
-    <section id="contact" class="contact-section"><div class="contact-texture" aria-hidden="true"></div><div class="container contact-wrap"><div class="section-overline reveal"><span class="section-no">/ 04 / CONTACT</span><span class="section-fine">LET'S MAKE SOMETHING WORK</span></div><h2 class="reveal">GOT SOMETHING<br>IN <em>MIND?</em><span class="acid-dot">*</span></h2><div class="contact-bottom reveal"><p>Open to remote opportunities and selected projects in web implementation, automation, and client operations.</p><a class="contact-circle magnetic" href="mailto:ajellsaliba@gmail.com?subject=Let's%20work%20together" aria-label="Email Ajell Saliba">↗</a></div><a class="big-email reveal" href="mailto:ajellsaliba@gmail.com">AJELLSALIBA@GMAIL.COM <span>↗</span></a></div></section>
+    <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">05 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
   </main>
-  <footer><div class="container footer-row"><a class="footer-brand" href="#top">AJELL SALIBA<span>®</span></a><span>© 2026 / BUILT TO WORK.</span><div><a href="https://www.linkedin.com/in/ajellsaliba" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="https://connectivestack.com" target="_blank" rel="noopener noreferrer">CONNECTIVESTACK ↗</a><a href="#top">BACK TO TOP ↑</a></div></div></footer>
+  <footer class="footer"><div class="layout-width footer-inner"><a href="#top" class="footer-brand">A<span>/</span>S</a><p>© <span id="year">2026</span> AJELL SALIBA. PERSONAL PORTFOLIO.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div></footer>
+  <div class="site-toast" id="siteToast" role="status" aria-live="polite"></div>
 </body>
 </html>

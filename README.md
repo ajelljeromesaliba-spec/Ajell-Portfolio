@@ -1,21 +1,21 @@
-# Ajell Saliba — Portfolio v2
+# Ajell Saliba | Personal Portfolio V4
 
-A premium, responsive portfolio for web implementation, GoHighLevel automation, and client operations.
+A static, image-led personal portfolio. No libraries or build step required.
 
-- Static HTML, CSS and vanilla JavaScript; no build step or packages.
-- Original WebGL raymarched rotating 3D chrome orbital sculpture, no external shader libraries.
-- Graceful CSS 3D fallback for clients without WebGL, reduced-motion support.
-- Scroll reveals, kinetic typography, animated ticker, project treatments, responsive mobile menu.
-- Public project links, factual work-history and professional résumé.
+## What changed
+- Entire hero rebuilt around an AI-assisted cinematic portrait (not a decorative 3D object).
+- Exactly three original newly generated editorial images are integrated into the hero, systems, and editorial interlude. No gallery and no old photos.
+- Four expertise areas with custom graphic treatments, clickable implementation stages, project filters, hover depth, accordion history, scroll feedback, and accessible mobile navigation.
+- Removed Aleesa Talmadge and any niche-specific pitches.
+- Accurate client work and résumé, with private work anonymized.
+
+## Files to publish
+- `index.html`, `styles-v4.css`, `script-v4.js`
+- `assets/hero-city.webp`, `assets/systems-touch.webp`, `assets/rain-editorial.webp`
+- Existing `resume-v2.html` and `assets/favicon.svg`
 
 ## Cloudflare deployment
+Deploy this repository as the same Cloudflare Worker static assets project. It should point at `./` and deploy the latest main branch commit. No custom domain changes required.
 
-**If you use Cloudflare Pages Git integration:** select this GitHub repository, branch `main`, framework preset **None**, build command blank, build output directory `.`.
-
-**If you use Cloudflare Workers Builds:** configure static assets with `wrangler.jsonc` (or point Workers build output at `./`) and ensure the build deploys the root directory. The repository is static and does not require npm.
-
-The repo is separate from ConnectiveStack. HTTPS URL will be assigned by Cloudflare upon successful deployment.
-
-### Workers Builds static assets (workers.dev)
-
-The included `wrangler.jsonc` names the Worker `ajell-portfolio` to match the current workers.dev deployment, and serves the static site at the repository root. If the project is Git-connected with Workers Builds, ensure the deploy command is `npx wrangler deploy` (framework preset is **None**). This config does not touch ConnectiveStack.
+## Photo treatment
+The three displayed images are AI-assisted editorial images derived from the supplied references. They are not presented as documentary photographs or screenshots of real product interfaces.
