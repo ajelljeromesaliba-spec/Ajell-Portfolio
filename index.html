@@ -14,14 +14,14 @@
   <meta property="og:url" content="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
-  <title>Ajell Saliba | Personal Portfolio</title>
+  <title>Ajell Saliba | Immersive Personal Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/hero-city.webp">
-  <link rel="stylesheet" href="styles-v4.css">
-  <script defer src="script-v4.js"></script>
+  <link rel="stylesheet" href="styles-v5.css">
+  <script defer src="script-v5.js"></script>
 </head>
 <body>
   <a href="#about" class="skip-link">Skip to content</a>
@@ -39,6 +39,7 @@
     <a href="#about">01 / About</a><a href="#expertise">02 / Expertise</a><a href="#work">03 / Work</a><a href="#experience">04 / Experience</a><a href="#contact">05 / Contact</a>
   </nav>
   <main>
+    <div class="hero-track" id="heroTrack" aria-label="Cinematic introduction, scroll to explore">
     <section class="hero" id="home" aria-labelledby="heroHeading">
       <div class="hero-photo" aria-hidden="true"><img src="assets/hero-city.webp" alt="" width="1578" height="888" fetchpriority="high" decoding="async"></div>
       <div class="hero-darkening" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
@@ -50,8 +51,20 @@
         <p class="hero-lede">I bring websites, workflows and teams together. From a working build to the details that make it reliable.</p>
         <div class="hero-actions"><a href="#work" class="button button-primary magnet"><span>Explore my work</span><span aria-hidden="true">↗</span></a><a href="#contact" class="button button-outline magnet">Get in touch <span aria-hidden="true">↗</span></a></div>
       </div>
+
+      <div class="hero-depth" aria-hidden="true">
+        <div class="hero-depth-heading"><span class="micro">SCROLL / FOLLOW THE CONNECTION</span><h2>From first click<br><em>to working system.</em></h2></div>
+        <div class="hero-planes">
+          <div class="hero-plane" data-hero-plane="0"><small>01 / BUILD</small><span class="plane-icon">⌘</span><strong>The website</strong><p>A clear first experience.</p><span class="plane-mini-bar"></span></div>
+          <div class="hero-plane" data-hero-plane="1"><small>02 / CONNECT</small><span class="plane-icon">↗</span><strong>The workflow</strong><p>Every lead goes somewhere.</p><span class="plane-mini-bar"></span></div>
+          <div class="hero-plane" data-hero-plane="2"><small>03 / VERIFY</small><span class="plane-icon">✓</span><strong>The handoff</strong><p>Tested before it's delivered.</p><span class="plane-mini-bar"></span></div>
+        </div>
+        <p class="hero-depth-foot">ONE CONNECTED JOURNEY <span>↓ KEEP SCROLLING</span></p>
+      </div>
+      <div class="hero-camera-label" aria-hidden="true"><span>01</span><span class="camera-track"><i id="heroCameraProgress"></i></span><span>DEPTH SEQUENCE</span></div>
       <div class="hero-bottom"><div class="hero-breadcrumb"><span class="tiny-pip"></span> AVAILABLE FOR REMOTE OPPORTUNITIES</div><a href="#about" class="scroll-cue">SCROLL TO DISCOVER <span>↓</span></a><div class="hero-frame-mark">2026 / SELECTED WORK</div></div>
     </section>
+    </div><!-- /hero track -->
     <div class="marquee-band" aria-label="Website implementation, automation, quality assurance, and operations"><div class="marquee-inner" aria-hidden="true"><span>IMPLEMENT</span><b>✳</b><span>CONNECT</span><b>✳</b><span>TEST</span><b>✳</b><span>DELIVER</span><b>✳</b><span>IMPLEMENT</span><b>✳</b><span>CONNECT</span><b>✳</b><span>TEST</span><b>✳</b><span>DELIVER</span><b>✳</b></div></div>
 
     <section class="section-intro section-pad" id="about">
@@ -84,26 +97,52 @@
       </div>
     </section>
 
-    <section class="systems-story section-pad" id="systems">
-      <div class="layout-width"><div class="section-heading system-heading" data-reveal><div><span class="section-number">HOW I APPROACH A PROJECT</span><h2>Build something.<br><em>Make it work.</em></h2></div><p>The interaction below shows how I think about an implementation from the first goal to the final quality check.</p></div></div>
-      <div class="layout-width systems-layout">
-        <div class="systems-photo-wrap" data-reveal>
-          <div class="systems-photo"><img src="assets/systems-touch.webp" alt="Cinematic illustration of Ajell engaging with an interface of connected digital systems" width="880" height="1100" loading="lazy" decoding="async"><div class="systems-photo-overlay"></div></div>
-          <div class="floating-label floating-label-top" aria-hidden="true"><span class="live-pulse"></span> A SYSTEM OF CONNECTED PARTS</div>
-          <div class="floating-label floating-label-bottom" aria-hidden="true"><span>01</span><span class="connection-bar"><i></i></span><span>04</span></div>
-          <p class="image-disclaimer">AI-assisted editorial illustration · workflow below is interactive</p>
-        </div>
-        <div class="workflow-module" data-reveal>
-          <div class="workflow-head"><span>INTERACTIVE WORKFLOW</span><span class="status-dot">SELECT A STAGE</span></div>
-          <div class="workflow-stages" role="tablist" aria-label="Implementation workflow stages">
-            <button class="flow-step active" type="button" role="tab" aria-selected="true" aria-controls="flowPanel" data-stage="0"><span class="step-index">01</span><span>Define</span><span class="step-arrow">↗</span></button>
-            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="1"><span class="step-index">02</span><span>Build</span><span class="step-arrow">↗</span></button>
-            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="2"><span class="step-index">03</span><span>Connect</span><span class="step-arrow">↗</span></button>
-            <button class="flow-step" type="button" role="tab" aria-selected="false" aria-controls="flowPanel" data-stage="3"><span class="step-index">04</span><span>Verify</span><span class="step-arrow">↗</span></button>
+
+    <!-- Purposeful 3D scroll scene: three real parts of a working implementation. -->
+    <section class="depth-scroll" id="systems" aria-labelledby="depthHeading">
+      <div class="depth-sticky">
+        <div class="depth-ambient" aria-hidden="true"></div>
+        <div class="depth-shell">
+          <div class="depth-copy">
+            <div class="depth-topline"><span class="section-number">SCENE 02 / THE WORKFLOW</span><span class="depth-counter" id="depthCounter">01 / 04</span></div>
+            <p class="depth-eyebrow">SCROLL TO BUILD THE SYSTEM</p>
+            <h2 id="depthHeading">Every piece<br><em>has a purpose.</em></h2>
+            <p class="depth-description" id="depthDescription" aria-live="off">Start with a visitor's action. The website creates the moment, but the next step has to work too.</p>
+            <div class="depth-stages" role="group" aria-label="Jump to a workflow scene">
+              <button class="depth-nav active" type="button" data-depth-go="0" aria-pressed="true"><span>01</span> WEBSITE</button>
+              <button class="depth-nav" type="button" data-depth-go="1" aria-pressed="false"><span>02</span> ROUTING</button>
+              <button class="depth-nav" type="button" data-depth-go="2" aria-pressed="false"><span>03</span> QA</button>
+              <button class="depth-nav" type="button" data-depth-go="3" aria-pressed="false"><span>04</span> DELIVERY</button>
+            </div>
+            <div class="depth-bottom"><span>SCROLL / CLICK A LAYER TO EXPLORE</span><span id="depthReadout">00%</span></div>
+            <div class="depth-meter" aria-hidden="true"><span id="depthMeterFill"></span></div>
           </div>
-          <div class="flow-detail" id="flowPanel" role="tabpanel" aria-live="polite" tabindex="0"><div class="flow-detail-eyebrow">STAGE <span id="stageNo">01</span> / 04</div><h3 id="stageTitle">Start with the outcome.</h3><p id="stageDesc">Define who the experience is for, what needs to happen next, and which systems must support it.</p><div class="flow-output"><span>EXPECTED OUTPUT</span><strong id="stageOutput">A clear path from visitor to action.</strong></div></div>
-          <div class="flow-visual" aria-label="Workflow progress visualization"><div class="flow-visual-track"><span class="flow-progress" id="flowProgress"></span></div><div class="flow-visual-labels"><span>BRIEF</span><span>LIVE SYSTEM</span></div></div>
-          <button type="button" class="next-stage" id="nextStage">NEXT STAGE <span aria-hidden="true">↗</span></button>
+          <div class="depth-visual" id="depthVisual">
+            <div class="depth-photo" aria-hidden="true"><img src="assets/systems-touch.webp" width="880" height="1100" loading="lazy" decoding="async" alt=""></div>
+            <div class="depth-orbit depth-orbit-one" aria-hidden="true"></div><div class="depth-orbit depth-orbit-two" aria-hidden="true"></div>
+            <div class="depth-floor" aria-hidden="true"></div>
+            <div class="depth-world" id="depthWorld">
+              <button type="button" class="depth-plate depth-plate-site" data-layer-index="0" aria-label="Explore website implementation scene">
+                <span class="plate-eyebrow"><span class="plate-dot"></span> 01 / EXPERIENCE <span>LIVE PREVIEW</span></span>
+                <strong>Someone clicks.</strong>
+                <span class="plate-browser"><span class="plate-browser-bar"><i></i><i></i><i></i><span>contact / book a call</span></span><span class="fake-form"><span>YOUR NAME</span><b>Alex Morgan</b><span>HOW CAN WE HELP?</span><b>I'd like to learn more.</b><em>SUBMIT REQUEST ↗</em></span></span>
+                <span class="plate-foot">A REAL ACTION, NOT JUST A PAGE</span>
+              </button>
+              <button type="button" class="depth-plate depth-plate-crm" data-layer-index="1" aria-label="Explore CRM and automation scene">
+                <span class="plate-eyebrow"><span class="plate-dot"></span> 02 / AUTOMATION <span>CONNECTED</span></span>
+                <strong>The lead moves.</strong>
+                <span class="plate-crm-surface"><span>NEW CONTACT <i>● NEW</i></span><b>Alex Morgan</b><small>Source: Website enquiry</small><span class="crm-pipeline"><i>CAPTURED</i><i>ROUTED</i><i>FOLLOW-UP</i></span></span>
+                <span class="plate-foot">ROUTING, BOOKING & FOLLOW-UP</span>
+              </button>
+              <button type="button" class="depth-plate depth-plate-qa" data-layer-index="2" aria-label="Explore quality assurance scene">
+                <span class="plate-eyebrow"><span class="plate-dot"></span> 03 / ASSURANCE <span>CHECKED</span></span>
+                <strong>Nothing gets lost.</strong>
+                <span class="plate-checks"><span><i>✓</i> Form submission received</span><span><i>✓</i> CRM routing verified</span><span><i>✓</i> Calendar & owner checked</span><span><i>✓</i> Handoff documented</span></span>
+                <span class="plate-foot">VERIFIED BEFORE HANDOFF</span>
+              </button>
+            </div>
+            <div class="depth-visual-tag" aria-hidden="true">ILLUSTRATIVE / INTERACTIVE IMPLEMENTATION FLOW</div>
+          </div>
         </div>
       </div>
     </section>
@@ -126,11 +165,13 @@
       <details class="career"><summary><span class="career-period">2015 — 2020</span><span class="career-title"><b>Earlier BPO experience</b><small>TELUS, iQor, Teletech & Teleperformance</small></span><span class="career-expander">+</span></summary><p>Frontline technical support, customer service and collections, forming the foundation for later work in leadership and delivery.</p></details>
     </div></div></section>
 
+    <div class="noir-track" id="noirTrack">
     <section class="editorial-break" aria-labelledby="editorialHeading">
       <div class="editorial-image" aria-hidden="true"><img src="assets/rain-editorial.webp" alt="" loading="lazy" decoding="async" width="880" height="1100"></div>
-      <div class="editorial-gradient" aria-hidden="true"></div><div class="editorial-grain" aria-hidden="true"></div>
+      <div class="editorial-gradient" aria-hidden="true"></div><div class="editorial-grain" aria-hidden="true"></div><div class="noir-curtain" aria-hidden="true"></div><div class="noir-chapter" aria-hidden="true">SCENE 04 / THE STANDARD <span>↓</span></div>
       <div class="layout-width editorial-content" data-reveal><span class="section-number">THE MINDSET / THE STANDARD</span><h2 id="editorialHeading">The details<br>make the <em>difference.</em></h2><p>What matters is what happens after launch. Does the form work? Does the contact reach the right place? Is the client handoff clear? That's where I pay attention.</p><div class="editorial-bottom"><span>AN APPROACH BUILT ON FOLLOW-THROUGH</span><span>05 / 05</span></div></div>
     </section>
+    </div><!-- /noir track -->
 
     <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">05 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
   </main>

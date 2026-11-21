@@ -1,21 +1,22 @@
-# Ajell Saliba | Personal Portfolio V4
+# Ajell Saliba — Immersive Personal Portfolio V5
 
-A static, image-led personal portfolio. No libraries or build step required.
+A static personal portfolio focused on web implementation, CRM automation, QA, client operations and support leadership. Industry-neutral and designed for job applications and selected client work.
 
-## What changed
-- Entire hero rebuilt around an AI-assisted cinematic portrait (not a decorative 3D object).
-- Exactly three original newly generated editorial images are integrated into the hero, systems, and editorial interlude. No gallery and no old photos.
-- Four expertise areas with custom graphic treatments, clickable implementation stages, project filters, hover depth, accordion history, scroll feedback, and accessible mobile navigation.
-- Removed Aleesa Talmadge and any niche-specific pitches.
-- Accurate client work and résumé, with private work anonymized.
+## Scroll scenes
+- **01 / Hero camera**: Scroll-scrubbed photo depth, perspective move, text recession and three explanatory planes that reveal the connected process.
+- **02 / Working architecture**: A four-stage, scroll-controlled 3D system using DOM/CSS perspective, not a decorative spinning object. Website inquiry, CRM routing, QA and complete delivery each have visual states. The stage buttons and 3D cards are clickable and change the scroll position.
+- **03 / Work proof**: Project visual planes turn in perspective as they enter the viewport. Public work links and category filters stay functional.
+- **04 / Editorial**: A pinned black-and-white portrait with a scroll-controlled reveal, depth movement and caption transition.
 
-## Files to publish
-- `index.html`, `styles-v4.css`, `script-v4.js`
-- `assets/hero-city.webp`, `assets/systems-touch.webp`, `assets/rain-editorial.webp`
-- Existing `resume-v2.html` and `assets/favicon.svg`
+Only the three recent AI-assisted editorial images are included in the website. No photo gallery, no Aleesa Talmadge and no niche-specific sales claims.
 
-## Cloudflare deployment
-Deploy this repository as the same Cloudflare Worker static assets project. It should point at `./` and deploy the latest main branch commit. No custom domain changes required.
+## Build and hosting
+The site uses standalone `index.html`, `styles-v5.css`, `script-v5.js` and `assets/*.webp`, plus the existing résumé and favicon. No build step and no third-party animation library. Cloudflare Workers static asset project serves the repository root from `main`.
 
-## Photo treatment
-The three displayed images are AI-assisted editorial images derived from the supplied references. They are not presented as documentary photographs or screenshots of real product interfaces.
+## Accessibility and performance
+- Native focusable interactive stage buttons and work filters.
+- Smooth scroll uses requestAnimationFrame and updates only scenes in view.
+- Motion is disabled and the 3D system is displayed as normal readable cards when users request reduced motion.
+- Responsive mobile layout tested at 390px and desktop at 1440px, with no horizontal overflow.
+
+GoDaddy DNS/domain settings are intentionally not changed by this commit.
