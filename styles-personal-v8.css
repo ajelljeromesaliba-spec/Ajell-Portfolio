@@ -1,0 +1,63 @@
+/* Personal identity + case studies. Lightweight: no filters, no scroll loops. */
+.desktop-nav a[href="#case-studies"],.desktop-nav a[href="#reviews"]{color:#e9f6f0}
+.hero-kicker{letter-spacing:.14em}
+.hero-human{display:flex;align-items:center;gap:13px;color:#e7eee6;font:600 13px/1.4 var(--body);margin-bottom:15px;letter-spacing:.03em}
+.hero-human:before{content:'';width:32px;height:1px;background:var(--accent)}
+.hero-personal-proof{display:flex;gap:13px;flex-wrap:wrap;margin-top:23px;max-width:670px}
+.hero-personal-proof span{border:1px solid #9cc4b64a;background:#09151b96;padding:9px 12px;color:#d4e0d9;font:500 10px/1.5 var(--mono);letter-spacing:.04em}
+.hero-personal-proof b{color:var(--accent)}
+.about-from{margin-top:36px;padding:24px 28px;border-left:2px solid var(--accent);background:linear-gradient(90deg,#1b33324d,transparent);max-width:780px}
+.about-from strong{display:block;color:var(--accent);font:600 11px var(--mono);letter-spacing:.13em;margin-bottom:12px}
+.about-from p{margin:0;color:#d7e3df;font:400 clamp(16px,1.7vw,21px)/1.75 var(--body)}
+.expertise-card .offer-list{margin:24px 0 0;padding:17px 0 0 0;list-style:none;border-top:1px solid #a3c3bb30}
+.expertise-card .offer-list li{color:#d4e3df;font:400 12px/1.8 var(--body);padding-left:20px;position:relative}
+.expertise-card .offer-list li:before{content:'↗';position:absolute;left:0;color:var(--accent)}
+.expertise-card{min-height:440px}
+.personal-cases{background:#0a141a;position:relative}
+.case-heading{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:end;margin-bottom:65px}
+.case-heading h2{font:600 clamp(53px,6.2vw,105px)/1.06 var(--display);letter-spacing:-.08em;margin:24px 0 0}
+.case-heading h2 em{font:italic 500 .98em/1.03 var(--serif);color:var(--accent)}
+.case-heading>p{color:#aabfc0;font:400 15px/1.9 var(--body);max-width:420px}
+.case-stack{display:grid;gap:19px}
+.case-study{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:0;border:1px solid #395258;min-width:0;background:#101d24;overflow:hidden;transition:border-color .26s}
+.case-study:hover,.case-study:focus-within{border-color:#86ceb0}
+.case-left{padding:clamp(29px,4vw,58px);position:relative;display:flex;flex-direction:column;min-width:0;background:linear-gradient(145deg,#193038,#0b1820)}
+.case-study:nth-child(2) .case-left{background:linear-gradient(150deg,#22302e,#0d191d)}
+.case-study:nth-child(3) .case-left{background:linear-gradient(145deg,#152531,#0e1923)}
+.case-study:nth-child(4) .case-left{background:linear-gradient(145deg,#23272e,#111b20)}
+.case-num{font:500 11px/1.4 var(--mono);letter-spacing:.13em;color:var(--accent);display:flex;justify-content:space-between;gap:12px}
+.case-left h3{font:600 clamp(32px,3.15vw,53px)/1.08 var(--display);letter-spacing:-.065em;margin:42px 0 16px}
+.case-left>p{color:#b6c9c7;font:400 14px/1.75 var(--body);margin:0 0 30px;max-width:380px}
+.case-art{margin-top:auto;border:1px solid #a7c9bf38;position:relative;height:122px;display:flex;align-items:center;padding:17px;overflow:hidden;background:#07121880}
+.case-art::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 21px,#9ec2bb13 22px);pointer-events:none}
+.case-art span{position:relative;font:500 10px var(--mono);color:#c7e1d9;letter-spacing:.05em;border:1px solid #83cdbf6a;background:#0c242b;min-width:63px;text-align:center;padding:11px 8px}
+.case-art i{height:1px;min-width:13px;flex:1;background:linear-gradient(90deg,#90baad,#b0f1ae)}
+.case-art .case-art-strong{background:#c4f7b3;color:#11211b;font-weight:700}
+.case-right{padding:clamp(29px,4vw,56px);display:flex;flex-direction:column;gap:25px;min-width:0}
+.case-role{display:flex;justify-content:space-between;gap:14px;align-items:start;border-bottom:1px solid #b4cdc337;padding-bottom:20px;color:#d2e6df;font:500 11px/1.5 var(--mono);letter-spacing:.08em}
+.case-role span:last-child{color:var(--accent)}
+.case-point{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start}
+.case-point b{font:600 10px/1.7 var(--mono);color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.case-point p{color:#c7d6d5;font:400 14px/1.78 var(--body);margin:0}
+.case-outcome{padding:18px 22px;background:#19382d6e;border-left:2px solid var(--accent)}
+.case-outcome strong{display:block;font:600 10px var(--mono);color:var(--accent);letter-spacing:.1em;margin-bottom:8px}
+.case-outcome p{font:450 14px/1.7 var(--body);color:#edf4e9;margin:0}
+.case-action{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px}
+.case-action a{color:var(--accent);border-bottom:1px solid currentColor;padding-bottom:10px;font:550 11px var(--mono);letter-spacing:.08em}
+.case-action small{color:#8da6a9;font:400 10px var(--mono);line-height:1.5;text-align:right}
+.case-person-note{max-width:740px;margin-top:24px;color:#9bb2b4;font:400 12px/1.7 var(--body)}
+.case-person-note strong{color:#c7e6d7}
+.work .section-heading h2{font-size:clamp(48px,5.2vw,83px)}
+.reference-panel .reference-insight{font:400 15px/1.9 var(--body);color:#dae8e3;margin:18px 0 24px}
+.reference-panel .reference-focus{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 23px}
+.reference-panel .reference-focus span{border:1px solid #8ebbb243;color:#c8e6d5;font:500 10px var(--mono);padding:8px}
+.review-card-nathan .review-reference-body{max-width:440px;font-size:clamp(17px,1.9vw,22px);line-height:1.75;color:#e2ede6}
+.review-card-nathan .review-reference-body strong{color:var(--accent)}
+.review-card-nathan .reference-focus{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.review-card-nathan .reference-focus span{font:500 9px/1.4 var(--mono);color:#cde6da;border:1px solid #88aa9d5b;padding:8px}
+.contact-section .personal-contact-lede{max-width:600px;font:400 16px/1.85 var(--body);color:#c3d5d0;margin:18px 0 27px}
+@media(max-width:1000px){.case-study{grid-template-columns:1fr}.case-left{min-height:300px}.case-left h3{margin:25px 0 16px}.case-art{margin-top:20px}.case-heading{grid-template-columns:1fr;gap:14px}.expertise-card{min-height:0}}
+@media(max-width:690px){.hero-human{font-size:12px}.hero-personal-proof{margin-top:15px;gap:7px}.hero-personal-proof span{font-size:8px;padding:6px 9px}.about-from{padding:19px;margin-top:26px}.about-from p{font-size:16px}.case-heading h2{font-size:clamp(50px,12vw,77px)}.case-heading>p{font-size:14px}.case-stack{gap:12px}.case-left,.case-right{padding:25px 22px}.case-left{min-height:0}.case-left h3{font-size:35px}.case-art{height:90px;padding:11px}.case-art span{font-size:8px;min-width:55px;padding:9px 6px}.case-point{grid-template-columns:1fr;gap:4px}.case-point p{font-size:13px}.case-right{gap:21px}.case-action{flex-direction:column;align-items:start}.case-action small{text-align:left}.expertise-card .offer-list{margin-top:16px}.case-person-note{font-size:11px}}
+
+/* Human-first heading adjustments */
+.hero-copy .hero-human{color:#e5f0ec}.about-primary .about-summary{max-width:820px}.about-primary .about-secondary{max-width:810px}

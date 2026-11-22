@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#080d12">
-  <meta name="description" content="Ajell Saliba. Web implementation, CRM automation, quality assurance and client operations. A personal portfolio built around the work and the people behind it.">
+  <meta name="description" content="Meet Ajell Saliba. See the websites, CRM workflows, delivery audits, and customer operations work I have handled, plus real client feedback.">
   <meta name="author" content="Ajell Saliba">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ajell Saliba | Websites, Systems & Client Operations">
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://ajell-portfolio.ajelljeromesaliba.workers.dev/">
-  <title>Ajell Saliba | Immersive Personal Portfolio</title>
+  <title>Ajell Saliba | Personal Portfolio, Work & Case Studies</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="styles-v6.css">
   <link rel="stylesheet" href="styles-v7.css">
   <link rel="stylesheet" href="styles-reviews-v2.css">
+  <link rel="stylesheet" href="styles-personal-v8.css">
   <script defer src="script-v7.js"></script>
 <style>
   /* Testimonials: readable full-length feedback, no expensive blur or parallax. */
@@ -64,14 +65,14 @@
   <header class="site-header" id="top">
     <a class="identity" href="#top" aria-label="Ajell Saliba, back to top"><span class="identity-mark"><img src="assets/ajell-mark.svg" alt="" width="50" height="50" decoding="async"></span><span class="identity-name">AJELL SALIBA <small>PERSONAL PORTFOLIO</small></span></a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a>
+      <a href="#about">About me</a><a href="#expertise">What I offer</a><a href="#case-studies">Case studies</a><a href="#reviews">Reviews</a>
     </nav>
     <button class="motion-toggle" type="button" id="motionToggle" aria-label="Switch animation intensity" aria-pressed="false">MOTION <span id="motionLabel">FULL</span></button>
     <a class="nav-contact magnet" href="#contact"><span>Let's talk</span><span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
   </header>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" inert>
-    <a href="#about">01 / About</a><a href="#expertise">02 / Expertise</a><a href="#work">03 / Work</a><a href="#experience">04 / Experience</a><a href="#reviews">05 / Reviews</a><a href="#contact">06 / Contact</a>
+    <a href="#about">About me</a><a href="#expertise">What I offer</a><a href="#case-studies">My case studies</a><a href="#work">Other work</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
   </nav>
   <main>
     <div class="hero-track" id="heroTrack" aria-label="Cinematic introduction, scroll to explore">
@@ -80,11 +81,11 @@
       <div class="hero-darkening" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-side-index" aria-hidden="true">01 / 05 &nbsp; • &nbsp; PORTFOLIO</div>
       <div class="hero-copy">
-        <p class="micro hero-kicker"><span class="signal-dot"></span> INDEPENDENT PROFESSIONAL · PHILIPPINES</p>
+        <p class="micro hero-kicker"><span class="signal-dot"></span> OPEN TO REMOTE ROLES &amp; SELECT PROJECTS · PHILIPPINES</p><span class="hero-human">Hi, I'm Ajell.</span>
         <h1 id="heroHeading">Ajell<br><em>Saliba.</em></h1>
-        <div class="hero-statement"><span class="short-rule"></span><div><p>Web implementation.</p><p>CRM automation.</p><p>Client operations.</p></div></div>
-        <p class="hero-lede">I bring websites, workflows and teams together. From a working build to the details that make it reliable.</p>
-        <div class="hero-actions"><a href="#work" class="button button-primary magnet"><span>Explore my work</span><span aria-hidden="true">↗</span></a><a href="#contact" class="button button-outline magnet">Get in touch <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-statement"><span class="short-rule"></span><div><p>I build websites.</p><p>I connect the systems.</p><p>I make sure they work.</p></div></div>
+        <p class="hero-lede">I've spent 11 years helping customers and teams solve problems. Today I build AI-assisted websites, GoHighLevel workflows, and delivery processes that people can actually use.</p>
+        <div class="hero-actions"><a href="#case-studies" class="button button-primary magnet"><span>See my case studies</span><span aria-hidden="true">↗</span></a><a href="#contact" class="button button-outline magnet">Work with me <span aria-hidden="true">↗</span></a></div><div class="hero-personal-proof"><span><b>11+</b> YEARS EXPERIENCE</span><span><b>4+</b> YEARS GOHIGHLEVEL</span><span><b>6,381</b> CLIENT RECORDS REVIEWED</span></div>
       </div>
 
       <div class="hero-depth" aria-hidden="true">
@@ -107,10 +108,11 @@
       <div class="layout-width about-layout">
         <div class="section-side"><span class="section-number">01 / ABOUT</span><span class="vertical-rule"></span><p>THE PERSON<br>BEHIND THE BUILD</p></div>
         <div class="about-primary" data-reveal>
-          <span class="eyebrow">BUILT THROUGH EXPERIENCE</span>
-          <h2>I care about the<br><em>part that works.</em></h2>
-          <p class="about-summary">I'm Ajell. I build websites with AI-assisted tools, connect the systems behind them and check that the entire experience works when someone actually uses it.</p>
-          <p class="about-secondary">My background started in customer support, moved into team leadership and quality assurance, then into web implementation and automation. That mix lets me understand both the technical work and the people relying on it.</p>
+          <span class="eyebrow">A LITTLE ABOUT ME</span>
+          <h2>Support agent.<br><em>Team lead. Builder.</em></h2>
+          <p class="about-summary">I didn't start with websites. I started by answering customer questions, handling difficult cases, and learning what breaks when a system fails the person using it.</p>
+          <p class="about-secondary">I moved into team leadership, quality assurance, and GoHighLevel administration before taking on website implementation, integrations, deployments and management-support audits. That range is why I care equally about the front end, the handoff, and the people using the tools after launch.</p>
+          <div class="about-from"><strong>HOW I ACTUALLY WORK</strong><p>I use AI-assisted builders for speed, then take responsibility for the real implementation: connecting forms, setting up domains, checking automations, testing the experience and documenting what needs fixing. I work remotely from Cainta, Rizal, Philippines.</p></div>
         </div>
         <div class="about-signature" data-reveal><div class="signature-lines"><i></i><i></i><i></i></div><span>CURIOUS BY DEFAULT.<br>ACCOUNTABLE BY DESIGN.</span></div>
       </div>
@@ -123,12 +125,12 @@
 
     <section class="expertise section-pad" id="expertise">
       <div class="layout-width">
-        <div class="section-heading" data-reveal><div><span class="section-number">02 / EXPERTISE</span><h2>Different skills.<br><em>One standard.</em></h2></div><p>From what a client sees to what happens after they click. These are the areas I work across.</p></div>
+        <div class="section-heading" data-reveal><div><span class="section-number">02 / WHAT I CAN OFFER</span><h2>Here's what I<br><em>can do for you.</em></h2></div><p>Whether you need an individual contributor or someone who can own a delivery workstream, these are services I've actually performed.</p></div>
         <div class="expertise-grid">
-          <article class="expertise-card tilt-card" data-reveal><span class="card-top">01 <span>↗</span></span><div class="icon-display web-icon" aria-hidden="true"><span>&lt;/&gt;</span><i></i></div><h3>Web<br>implementation</h3><p>Landing pages, responsive websites, forms, domain setup, DNS, SSL, SEO basics and deployments.</p><div class="skill-tags">VERCEL <span>·</span> CLOUDFLARE <span>·</span> LOVABLE</div></article>
-          <article class="expertise-card tilt-card" data-reveal><span class="card-top">02 <span>↗</span></span><div class="icon-display crm-icon" aria-hidden="true"><i></i><i></i><i></i></div><h3>CRM &<br>automation</h3><p>GoHighLevel pipelines, calendars, lead routing, automated follow-ups, webhooks and connected tools.</p><div class="skill-tags">GOHIGHLEVEL <span>·</span> API <span>·</span> ZAPIER</div></article>
-          <article class="expertise-card tilt-card" data-reveal><span class="card-top">03 <span>↗</span></span><div class="icon-display qa-icon" aria-hidden="true"><span>✓</span><i></i></div><h3>Quality &<br>client operations</h3><p>Onboarding checks, account audits, calendar connections, delivery blockers and task reviews.</p><div class="skill-tags">QA <span>·</span> CLIENT DELIVERY <span>·</span> AUDITS</div></article>
-          <article class="expertise-card tilt-card" data-reveal><span class="card-top">04 <span>↗</span></span><div class="icon-display support-icon" aria-hidden="true"><b>◉</b><i>◉</i></div><h3>Customer support<br>& leadership</h3><p>Customer service, Shopify and Amazon operations, escalations, retention and team quality.</p><div class="skill-tags">SHOPIFY <span>·</span> ZENDESK <span>·</span> TEAM LEAD</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">01 <span>↗</span></span><div class="icon-display web-icon" aria-hidden="true"><span>&lt;/&gt;</span><i></i></div><h3>Websites you can launch</h3><p>I implement responsive websites and landing pages, connect forms and bookings, and handle the deployment checks before you share the link.</p><ul class="offer-list"><li>Live website or landing page</li><li>DNS, SSL, form and booking checks</li><li>Responsive QA and handover</li></ul><div class="skill-tags">VERCEL <span>·</span> CLOUDFLARE <span>·</span> LOVABLE</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">02 <span>↗</span></span><div class="icon-display crm-icon" aria-hidden="true"><i></i><i></i><i></i></div><h3>CRM &amp; follow-up systems</h3><p>I configure GoHighLevel pipelines, booking calendars and lead routing. I check what happens after a visitor submits a form.</p><ul class="offer-list"><li>Pipelines, routing and workflows</li><li>Calendars, webhooks and integrations</li><li>Submission-to-follow-up testing</li></ul><div class="skill-tags">GOHIGHLEVEL <span>·</span> API <span>·</span> ZAPIER</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">03 <span>↗</span></span><div class="icon-display qa-icon" aria-hidden="true"><span>✓</span><i></i></div><h3>Client delivery &amp; QA</h3><p>I audit onboarding handoffs, account records, sales calendars and open tasks, then flag what needs an owner or decision.</p><ul class="offer-list"><li>Client record and handoff reviews</li><li>PASS / FAIL / needs-confirmation checks</li><li>Clear blocker and ownership reporting</li></ul><div class="skill-tags">QA <span>·</span> CLIENT DELIVERY <span>·</span> AUDITS</div></article>
+          <article class="expertise-card tilt-card" data-reveal><span class="card-top">04 <span>↗</span></span><div class="icon-display support-icon" aria-hidden="true"><b>◉</b><i>◉</i></div><h3>Customer support leadership</h3><p>I bring frontline customer-service judgment and team-lead experience, including Shopify, Zendesk, escalations and quality reviews.</p><ul class="offer-list"><li>Email and case management</li><li>Team QA and escalation support</li><li>Process follow-up and reporting</li></ul><div class="skill-tags">SHOPIFY <span>·</span> ZENDESK <span>·</span> TEAM LEAD</div></article>
         </div>
       </div>
     </section>
@@ -141,8 +143,8 @@
         <div class="depth-shell">
           <div class="depth-copy">
             <div class="depth-topline"><span class="section-number">SCENE 02 / THE WORKFLOW</span><span class="depth-counter" id="depthCounter">01 / 04</span></div>
-            <p class="depth-eyebrow">SCROLL TO BUILD THE SYSTEM</p>
-            <h2 id="depthHeading">Every piece<br><em>has a purpose.</em></h2>
+            <p class="depth-eyebrow">SCROLL THROUGH HOW I WORK</p>
+            <h2 id="depthHeading">From a first click<br><em>to a real handoff.</em></h2>
             <p class="depth-description" id="depthDescription" aria-live="off">Start with a visitor's action. The website creates the moment, but the next step has to work too.</p>
             <div class="depth-deliverables" id="depthDeliverables" aria-live="off"><span class="depth-deliverable-label">WHAT GETS DONE IN THIS STAGE</span><ul id="depthChecklist"><li>Responsive content and clear calls to action</li><li>Forms, booking and destination checks</li><li>Mobile and browser testing</li></ul></div>
             <div class="depth-stages" role="group" aria-label="Jump to a workflow scene">
@@ -196,8 +198,52 @@
       </div>
     </section>
 
+    <section class="personal-cases section-pad" id="case-studies" aria-labelledby="caseStudiesHeading">
+  <div class="layout-width">
+    <div class="case-heading" data-reveal><div><span class="section-number">03 / MY CASE STUDIES</span><h2 id="caseStudiesHeading">What I did.<br><em>What came out of it.</em></h2></div><p>Real projects and workstreams from my experience. I describe my role, the work done and the output without making up revenue numbers or publishing confidential client accounts.</p></div>
+    <div class="case-stack">
+      <article class="case-study" data-reveal>
+        <div class="case-left"><span class="case-num">01 / PUBLIC INDEPENDENT PROJECT <span>WEBSITE + SYSTEMS</span></span><h3>ConnectiveStack</h3><p>I used my own site as a practical place to build, publish and demonstrate the systems I can implement.</p><div class="case-art" aria-hidden="true"><span>BUILD</span><i></i><span>CONNECT</span><i></i><span class="case-art-strong">LIVE</span></div></div>
+        <div class="case-right"><div class="case-role"><span>MY ROLE: END-TO-END IMPLEMENTATION</span><span>PUBLIC PROJECT</span></div>
+          <div class="case-point"><b>The brief</b><p>Turn a portfolio of capabilities into a working website with interactive examples, lead capture and a way for someone to make contact.</p></div>
+          <div class="case-point"><b>What I handled</b><p>AI-assisted site builds, publishing through Vercel, Cloudflare DNS, contact form delivery, demo flows, calendar links, responsive checks and technical fixes.</p></div>
+          <div class="case-outcome"><strong>VERIFIABLE OUTPUT</strong><p>A publicly accessible website with working demo pages and contact paths. The site is a portfolio project, not a claim of paying-client conversions.</p></div>
+          <div class="case-action"><a href="https://connectivestack.com" target="_blank" rel="noopener noreferrer">VIEW THE LIVE PROJECT ↗</a><small>Independent build · no fabricated KPIs</small></div>
+        </div>
+      </article>
+      <article class="case-study" data-reveal>
+        <div class="case-left"><span class="case-num">02 / AI ACQUISITION <span>MANAGEMENT SUPPORT</span></span><h3>6,381 client records reviewed</h3><p>Delivery quality depends on knowing which tasks are complete, blocked or still waiting for someone.</p><div class="case-art" aria-hidden="true"><span>REVIEW</span><i></i><span>FLAG</span><i></i><span class="case-art-strong">ROUTE</span></div></div>
+        <div class="case-right"><div class="case-role"><span>MY ROLE: AUDIT &amp; FOLLOW-UP</span><span>PRIVATE CLIENT WORK</span></div>
+          <div class="case-point"><b>The challenge</b><p>Client onboarding records, task ownership and sales calendar connections needed to be reviewed without changing live client setups or assuming unverified facts.</p></div>
+          <div class="case-point"><b>What I handled</b><p>Reviewed 6,381 records, checked onboarding handoffs and calendar connections, classified PASS / FAIL / NEEDS CONFIRMATION, and raised blockers or overdue tasks for responsible owners.</p></div>
+          <div class="case-outcome"><strong>DOCUMENTED OUTPUT</strong><p>Consolidated review and issue flags for management follow-up. I do not claim a specific conversion lift or closure rate without verified data.</p></div>
+          <div class="case-action"><span></span><small>Client data omitted for confidentiality</small></div>
+        </div>
+      </article>
+      <article class="case-study" data-reveal>
+        <div class="case-left"><span class="case-num">03 / CLIENT IMPLEMENTATION WORK <span>WEB + CRM</span></span><h3>From inquiry to booked call</h3><p>A page isn't ready if the lead disappears once someone presses Submit.</p><div class="case-art" aria-hidden="true"><span>FORM</span><i></i><span>GHL</span><i></i><span class="case-art-strong">BOOK</span></div></div>
+        <div class="case-right"><div class="case-role"><span>MY ROLE: TECHNICAL IMPLEMENTATION + QA</span><span>COMPOSITE WORKFLOW</span></div>
+          <div class="case-point"><b>The problem</b><p>Website forms, domains, booking calendars and CRM follow-up are separate systems. Each connection needs setup and verification.</p></div>
+          <div class="case-point"><b>What I handled</b><p>Connected forms to GoHighLevel pipelines and routing, worked on webhooks, configured DNS and email authentication records, and tested form submissions, calendars and the handoff.</p></div>
+          <div class="case-outcome"><strong>WHAT I DELIVERED</strong><p>Configured and tested connected lead-handling flows. This is a representative summary across implementations, not one invented named-client case study.</p></div>
+          <div class="case-action"><span></span><small>Client accounts and credentials excluded</small></div>
+        </div>
+      </article>
+      <article class="case-study" data-reveal>
+        <div class="case-left"><span class="case-num">04 / PROCLICK <span>SUPPORT + LEADERSHIP</span></span><h3>Customer support to team lead</h3><p>I came from the side of the business where customers tell you what isn't working.</p><div class="case-art" aria-hidden="true"><span>SUPPORT</span><i></i><span>QA</span><i></i><span class="case-art-strong">LEAD</span></div></div>
+        <div class="case-right"><div class="case-role"><span>MY ROLE: SUPPORT, QA, TEAM LEAD &amp; GHL</span><span>CLIENT REVIEW AVAILABLE</span></div>
+          <div class="case-point"><b>The work</b><p>Supported e-commerce customer cases and Shopify workflows, managed team delivery and quality reviews, and maintained CRM funnels, contact segments, calendars and automation.</p></div>
+          <div class="case-point"><b>How I progressed</b><p>Moved from customer service into team leadership at ProClick, taking responsibility for day-to-day work and helping others resolve problems.</p></div>
+          <div class="case-outcome"><strong>INDEPENDENT EVIDENCE</strong><p>ProClick's owner Alfred described the promotion and my team leadership in his full 5-star Upwork review, reproduced in the reviews section.</p></div>
+          <div class="case-action"><a href="#reviews">READ ALFRED'S REVIEW ↗</a><small>Promotion documented in client feedback</small></div>
+        </div>
+      </article>
+    </div>
+    <p class="case-person-note"><strong>Accuracy note:</strong> Some work examples combine responsibilities performed across private client accounts. Only ConnectiveStack is presented as a linked public project; private work is anonymized.</p>
+  </div>
+</section>
     <section class="work section-pad" id="work">
-      <div class="layout-width"><div class="section-heading" data-reveal><div><span class="section-number">03 / SELECTED WORK</span><h2>Proof is in<br><em>the execution.</em></h2></div><p>Selected public work and real areas of responsibility. No private client records or invented performance numbers.</p></div>
+      <div class="layout-width"><div class="section-heading" data-reveal><div><span class="section-number">04 / MORE HANDS-ON EXPERIENCE</span><h2>Other work<br><em>I've handled.</em></h2></div><p>Examples of tasks and systems I've personally worked on. Use the filters to explore web builds, automations and client delivery.</p></div>
       <div class="work-filters" aria-label="Filter work"><button class="work-filter active" type="button" data-filter="all" aria-pressed="true">All work <span>08</span></button><button class="work-filter" type="button" data-filter="build" aria-pressed="false">Build</button><button class="work-filter" type="button" data-filter="automation" aria-pressed="false">Automation</button><button class="work-filter" type="button" data-filter="operations" aria-pressed="false">Operations</button></div>
       <div class="work-grid" id="workGrid">
         <article class="project-tile project-featured tilt-card" data-category="build" data-reveal><div class="project-art art-stack" aria-hidden="true"><div class="browser-chrome"><div class="chrome-dots"><i></i><i></i><i></i></div><span>CONNECTIVESTACK / SELECTED DEMOS</span></div><div class="site-preview-mark">YOU OWN<br><em>WHAT WE BUILD.</em></div><div class="site-preview-ui"><span>01 / VISIT</span><span>02 / CONNECT</span><span>03 / BOOK</span></div></div><div class="project-copy"><span class="project-type">01 / INDEPENDENT PROJECT</span><h3>ConnectiveStack</h3><p>A public portfolio of AI-assisted websites, live demos and connected enquiry flows. I handled site implementation, deployment, DNS, testing and the systems behind the experience.</p><a class="project-link" href="https://connectivestack.com" target="_blank" rel="noopener noreferrer" aria-label="Open ConnectiveStack in new tab">VIEW PUBLIC PROJECT <span>↗</span></a></div></article>
@@ -214,7 +260,7 @@
 
     <section class="practice section-pad" id="practice" aria-labelledby="practiceHeading">
       <div class="layout-width practice-shell">
-        <div class="practice-intro" data-reveal><span class="section-number">04 / HOW I WORK</span><h2 id="practiceHeading">From brief<br><em>to handoff.</em></h2><p>My work spans the visible pages and the invisible setup. Here's what I actually take responsibility for, from implementation through quality checks.</p><a class="inline-link" href="#systems">EXPLORE THE INTERACTIVE WORKFLOW <span>↗</span></a></div>
+        <div class="practice-intro" data-reveal><span class="section-number">05 / HOW I WORK</span><h2 id="practiceHeading">How I'd handle<br><em>your project.</em></h2><p>My work spans the visible pages and the invisible setup. Here's what I actually take responsibility for, from implementation through quality checks.</p><a class="inline-link" href="#systems">EXPLORE THE INTERACTIVE WORKFLOW <span>↗</span></a></div>
         <div class="practice-rows" data-reveal>
           <div class="practice-row"><span>01</span><div><h3>Build & launch</h3><p>AI-assisted site implementation, responsive layout checks, GitHub and Vercel deployments, Cloudflare configuration, forms and contact routes.</p></div><span class="practice-arrow">↗</span></div>
           <div class="practice-row"><span>02</span><div><h3>Connect the workflow</h3><p>GoHighLevel forms, pipelines, calendars, assignment logic, email sending domains, webhook and API integrations, and follow-up automations.</p></div><span class="practice-arrow">↗</span></div>
@@ -225,7 +271,7 @@
       <div class="layout-width toolkit-shell" data-reveal><div><span class="section-number">TOOLS I HAVE WORKED WITH</span><p>Tools are grouped by the work they support. This isn't a claim that every platform was used in every project.</p></div><div class="toolkit-grid"><div><strong>WEBSITES & DEPLOYMENT</strong><span>Lovable · GitHub · Vercel · Cloudflare · WordPress · Supabase</span></div><div><strong>CRM & INTEGRATIONS</strong><span>GoHighLevel · Zapier · Webhooks · REST APIs · HubSpot</span></div><div><strong>AI & EMAIL SYSTEMS</strong><span>Vapi · Retell · Resend · Mailgun · ChatGPT</span></div><div><strong>OPERATIONS & SUPPORT</strong><span>Shopify · Zendesk · Canva · Google Workspace</span></div></div></div>
     </section>
 
-    <section class="experience section-pad" id="experience"><div class="layout-width experience-layout"><div class="experience-head" data-reveal><span class="section-number">05 / EXPERIENCE</span><h2>Built on<br><em>real work.</em></h2><p>11 years moving from customer support into leadership, connected systems and client delivery.</p><a href="resume-v2.html" class="inline-link">VIEW FULL RÉSUMÉ <span>↗</span></a></div><div class="career-list" data-reveal>
+    <section class="experience section-pad" id="experience"><div class="layout-width experience-layout"><div class="experience-head" data-reveal><span class="section-number">06 / EXPERIENCE</span><h2>Built on<br><em>real work.</em></h2><p>11 years moving from customer support into leadership, connected systems and client delivery.</p><a href="resume-v2.html" class="inline-link">VIEW FULL RÉSUMÉ <span>↗</span></a></div><div class="career-list" data-reveal>
       <details class="career" open><summary><span class="career-period">2025 — 2026</span><span class="career-title"><b>AI Acquisition</b><small>Web & AI Automation Specialist / Management Support</small></span><span class="career-expander">+</span></summary><p><strong>Web implementation:</strong> built and launched client sites, configured DNS and deployments, and tested forms and booking flows.<br><strong>Integrations:</strong> connected GoHighLevel pipelines, webhooks, APIs and email delivery settings.<br><strong>Management support:</strong> reviewed 6,381 client records, audited onboarding and sales calendar handovers, and flagged delivery blockers.</p></details>
       <details class="career"><summary><span class="career-period">2022 — 2025</span><span class="career-title"><b>ProClick</b><small>Team Lead / GoHighLevel Specialist</small></span><span class="career-expander">+</span></summary><p><strong>Team delivery:</strong> led day-to-day operations, quality reviews, and customer escalations.<br><strong>CRM:</strong> built and maintained GoHighLevel funnels, pipelines, calendars, contact segments and follow-up workflows.<br><strong>Support:</strong> hands-on Shopify and Amazon customer operations.</p></details>
       <details class="career"><summary><span class="career-period">2020 — 2022</span><span class="career-title"><b>Transparent BPO</b><small>Sales, QA & Virtual Assistance</small></span><span class="career-expander">+</span></summary><p>Supported outbound sales, customer communication, CRM updates and quality checks for remote client operations, with attention to record accuracy and follow-through.</p></details>
@@ -234,8 +280,8 @@
 
     <section class="client-quote review-section section-pad" id="reviews" aria-labelledby="reviewsHeading">
   <div class="layout-width review-intro" data-reveal>
-    <div><span class="section-number">CLIENT & COLLEAGUE FEEDBACK / 05 PEOPLE</span><h2 id="reviewsHeading">The people<br><em>behind the words.</em></h2></div>
-    <p>Direct feedback from clients and colleagues I've worked with. Four written reviews and one approved professional reference. Every photo here came from a profile image you supplied.</p>
+    <div><span class="section-number">CLIENT & COLLEAGUE FEEDBACK / 05 PEOPLE</span><h2 id="reviewsHeading">What it's like<br><em>to work with me.</em></h2></div>
+    <p>Feedback from clients and colleagues who have worked alongside me. Four written reviews and a professional reference, with their names and roles.</p>
   </div>
   <div class="layout-width review-wall">
     <article class="review-card review-card-alfred" data-reveal>
@@ -262,11 +308,11 @@
     <article class="review-card review-card-nathan" data-reveal>
       <div class="review-card-top"><span>05 / 05 &nbsp; · &nbsp; PROFESSIONAL REFERENCE</span></div>
       <div class="review-reference-mark" aria-hidden="true">NJ<span>↗</span></div>
-      <p class="review-reference-body">Approved professional recommendation.</p>
+      <p class="review-reference-body"><strong>Worked together at AI Acquisition.</strong> Nathan's approved recommendation covers my technical problem-solving, GoHighLevel execution and management-support work. This is a summary of the recommendation, not a direct quote.</p><div class="reference-focus"><span>GOHIGHLEVEL</span><span>PROBLEM SOLVING</span><span>MANAGEMENT SUPPORT</span></div>
       <div class="review-identity"><img src="assets/review-nathan.webp" width="96" height="96" loading="lazy" decoding="async" alt="Photo provided for Nathan Justice"><div><strong>Nathan Justice</strong><span>Senior Account Manager · AI Acquisition</span></div></div>
     </article>
   </div>
-  <p class="layout-width review-note">The fifth entry is an approved professional reference. Its original written endorsement is not quoted here because the exact text was not recovered.</p>
+  <p class="layout-width review-note">Nathan Justice's card summarizes the focus of an approved recommendation; the original words are not quoted. The other written feedback is reproduced from supplied reviews.</p>
 </section>
 
     <div class="noir-track" id="noirTrack">
@@ -277,7 +323,7 @@
     </section>
     </div><!-- /noir track -->
 
-    <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">07 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
+    <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">08 / GET IN TOUCH</span><h2>Need someone who<br><em>owns the details?</em></h2><p class="personal-contact-lede">I'm available for remote roles and selected projects involving website implementation, GoHighLevel, QA, customer operations and team support. Show me the problem, the current setup, and what needs to be delivered.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
   </main>
   <footer class="footer"><div class="layout-width footer-inner"><a href="#top" class="footer-brand" aria-label="Ajell Saliba, back to top"><img src="assets/ajell-mark.svg" width="40" height="40" alt=""><span>AJELL SALIBA</span></a><p>© <span id="year">2026</span> AJELL SALIBA. PERSONAL PORTFOLIO.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div></footer>
   <div class="site-toast" id="siteToast" role="status" aria-live="polite"></div>
