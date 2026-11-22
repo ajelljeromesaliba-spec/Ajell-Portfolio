@@ -22,18 +22,60 @@
   if (!hero || !chapters.length) return;
   root.classList.add('v29-ready');
 
-  // Perspective rings are generated only as decoration: no extra network requests or WebGL.
-  const stage = document.createElement('div');
-  stage.className = 'v29-hero-stage';
-  stage.setAttribute('aria-hidden', 'true');
-  stage.innerHTML = '<div class="v29-stage-grid"></div>' +
-    '<div class="v29-orbit v29-orbit-a"></div>' +
-    '<div class="v29-orbit v29-orbit-b"></div>' +
-    '<div class="v29-orbit v29-orbit-c"></div>' +
-    '<div class="v29-planet"><span></span></div>' +
-    '<div class="v29-marker v29-marker-a"></div>' +
-    '<div class="v29-marker v29-marker-b"></div>';
+  // The diagram is the portfolio's actual delivery loop. Each node navigates to evidence.
+  // Slow orbital signals keep it alive at rest; chapter progress keeps it tied to the page.
+  const stage = document.createElement('nav');
+  stage.className = 'v29-hero-stage v31-workflow';
+  stage.setAttribute('aria-label', 'Explore my working process');
+  stage.dataset.phase = '0';
+  stage.innerHTML = `
+    <div class="v31-workflow-halo" aria-hidden="true"></div>
+    <div class="v31-workflow-orbit v31-workflow-orbit-a" aria-hidden="true"><i></i></div>
+    <div class="v31-workflow-orbit v31-workflow-orbit-b" aria-hidden="true"><i></i></div>
+    <div class="v31-workflow-orbit v31-workflow-orbit-c" aria-hidden="true"></div>
+    <div class="v31-workflow-core" aria-hidden="true">
+      <small>HOW I WORK</small><strong>ISSUE<br>TO FIX.</strong>
+      <span class="v31-core-status">01 / PEOPLE</span>
+    </div>
+    <a class="v31-flow-node" data-phase="0" href="#expertise"><small>01</small><strong>PEOPLE</strong><em>Understand</em></a>
+    <a class="v31-flow-node" data-phase="1" href="#selected-work"><small>02</small><strong>SYSTEMS</strong><em>Build</em></a>
+    <a class="v31-flow-node" data-phase="2" href="#case-studies"><small>03</small><strong>QA</strong><em>Verify</em></a>
+    <a class="v31-flow-node" data-phase="3" href="#experience"><small>04</small><strong>DELIVERY</strong><em>Follow through</em></a>
+    <span class="v31-flow-footnote" aria-hidden="true">FROM FIRST CONTACT TO WORKING DELIVERY</span>
+  `;
   hero.appendChild(stage);
+
+  const phaseNames = ['PEOPLE', 'SYSTEMS', 'QA', 'DELIVERY'];
+  const chapterPhases = {
+    home: 0, expertise: 0, 'systems-bridge': 1, 'selected-work': 1,
+    'case-studies': 2, 'rain-scene': 2, experience: 3,
+    voices: 3, about: 0, contact: 3
+  };
+  const phaseNodes = Array.from(stage.querySelectorAll('.v31-flow-node'));
+  const coreStatus = stage.querySelector('.v31-core-status');
+  let currentPhase = -1;
+  function setPhase(phase) {
+    if (currentPhase === phase) return;
+    currentPhase = phase;
+    stage.dataset.phase = String(phase);
+    root.dataset.workflowPhase = String(phase);
+    phaseNodes.forEach((node, index) => node.classList.toggle('is-active', index === phase));
+    if (coreStatus) coreStatus.textContent = String(phase + 1).padStart(2, '0') + ' / ' + phaseNames[phase];
+  }
+  let idlePhase = 0;
+  let heroIsVisible = true;
+  const heroObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver(entries => { heroIsVisible = entries[0]?.isIntersecting || false; }, { threshold: .08 })
+    : null;
+  heroObserver?.observe(hero);
+  const idleLoop = window.setInterval(() => {
+    if (!heroIsVisible || document.hidden || reduced.matches) return;
+    // Let scroll control the process once the visitor moves into the page.
+    if (window.scrollY > 80) return;
+    idlePhase = (idlePhase + 1) % phaseNames.length;
+    setPhase(idlePhase);
+  }, 2800);
+  stage.addEventListener('focusin', () => window.clearInterval(idleLoop), { once: true });
 
   // Quiet scroll timeline, with real anchor links and a readable chapter label.
   const progress = document.createElement('div');
@@ -47,7 +89,7 @@
   const readout = document.createElement('div');
   readout.className = 'v29-readout';
   readout.setAttribute('aria-hidden', 'true');
-  readout.innerHTML = '<span class="v29-readout-index">01</span><span class="v29-readout-divider"></span><span class="v29-readout-label">INTRODUCTION</span>';
+  readout.innerHTML = '<span class="v29-readout-index">01</span><span class="v29-readout-divider"></span><span class="v29-readout-label">INTRODUCTION</span><span class="v31-readout-phase">PEOPLE</span>';
   const dots = chapters.map((chapter, i) => {
     const link = document.createElement('a');
     link.href = '#' + chapter.id;
@@ -107,6 +149,12 @@
       const label = readout.querySelector('.v29-readout-label');
       if (number) number.textContent = String(current + 1).padStart(2, '0');
       if (label) label.textContent = chapters[current].label.toUpperCase();
+      // A continuous, named workflow links this hero to the section rail.
+      const phase = chapterPhases[chapters[current].id] ?? 0;
+      setPhase(phase);
+      const phaseReadout = readout.querySelector('.v31-readout-phase');
+      if (phaseReadout) phaseReadout.textContent = phaseNames[phase];
+
     }
     if (reduced.matches) return;
 
