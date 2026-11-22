@@ -1,26 +1,18 @@
-# Ajell Saliba · Personal Portfolio V13
+# Ajell Saliba / Personal Archive V14
 
-A personal editorial website built as a static HTML/CSS/JavaScript experience.
-
-## Design
-- Cinematic portrait-led introduction and scroll-linked photo motion
-- Three scroll-controlled story chapters (support, leadership, implementation), with 3D CSS orbit
-- Editorial selected-work entries grounded in actual responsibilities
-- Seven-employer chronology and five original feedback/reference entries
-- Monochrome photographic interlude, personal closing chapter
-- Mobile Lite mode (default), Full mode toggle, reduced-motion support
+A cinematic, photography-led personal portfolio. Static HTML/CSS/JavaScript deployed through the `Ajell-Portfolio` GitHub repository to Cloudflare Workers.
 
 ## Files
-- `index.html`
-- `styles-v13.css`
-- `script-v13.js`
-- `assets/*` original optimized portraits and reviewer photos
-- `resume-v2.html` is retained from the existing GitHub repository; the V13 website links to that existing résumé
 
-## Deploy
-This is a static site. Cloudflare builds from the repository root without a framework command. Existing Cloudflare Worker/project configuration should remain unchanged.
+- `index.html`: main website, original case study text, 7 employers, 5 reviews
+- `styles-v13.css`: retained structural and content-specific styling
+- `styles-v14.css`: cinematic redesign and responsive art direction
+- `script-v14.js`: scroll-linked perspective, chapter progression, motion intensity and accessible navigation
+- `assets/`: optimized portrait and reviewer photographs, monogram, favicon and social image
+- `resume-v2.html`: printable résumé retained in GitHub repo
 
-## Editorial safeguards
-- No invented sales, revenue or performance outcomes
-- Private client accounts remain anonymous; composite case studies are labeled
-- Nathan Justice is described as an approved professional reference, not quoted
+The site intentionally does not pitch services as a business. Its focus is personal identity, experience, selected work and people who have worked with Ajell. Four private/public case studies and the five testimonial/reference entries have been retained from the established source. Where exact quotes were unavailable, a professional reference is labeled as such.
+
+## Performance
+
+Mobile starts in Lite mode; Full is opt-in and the motion toggle is functional. Animation uses scroll-progress transforms and opacity, while `prefers-reduced-motion` is respected. No WebGL library or paid infrastructure is required. V14 is intended to remain compatible with the existing Cloudflare Worker / GitHub deployment.
