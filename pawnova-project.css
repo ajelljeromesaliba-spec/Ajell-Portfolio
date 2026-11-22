@@ -1,0 +1,30 @@
+/* Paw Nova project card: scoped to preserve the existing portfolio presentation. */
+.featured-project-pawnova .project-art-pawnova {
+  background: radial-gradient(circle at 50% 44%, rgba(111, 142, 102, .30), transparent 46%), linear-gradient(140deg, #172825 0%, #0b1d1e 65%, #101c19 100%);
+}
+.featured-project-pawnova .project-art-pawnova::before {
+  border-color: rgba(214, 235, 191, .18);
+  width: min(24rem, 64vw);
+  height: min(24rem, 64vw);
+}
+.featured-project-pawnova .project-typography > span {
+  color: #f5f1e6;
+  letter-spacing: .025em;
+}
+.featured-project-pawnova .project-typography strong {
+  color: #c2d6ac;
+  font-size: clamp(3.3rem, 7vw, 6.2rem);
+  letter-spacing: -.065em;
+}
+.featured-project-pawnova .project-typography small {
+  color: #c9d8c4;
+  letter-spacing: .08em;
+}
+.featured-project-pawnova .project-art-top,
+.featured-project-pawnova .project-art-footer {
+  color: #cbd9bb;
+}
+@media (max-width: 700px) {
+  .featured-project-pawnova .project-typography strong {font-size: clamp(3.4rem, 14vw, 5.5rem);}
+  .featured-project-pawnova .project-typography small {font-size: 9px; letter-spacing: .035em;}
+}
