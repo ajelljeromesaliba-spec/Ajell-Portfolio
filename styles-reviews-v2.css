@@ -1,0 +1,35 @@
+
+/* Five-person reference wall: deliberately lightweight and readable */
+.review-section{background:radial-gradient(ellipse 70% 55% at 10% 30%,#14303570,transparent 80%),#081016}
+.review-intro{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:clamp(28px,6vw,95px);margin-bottom:clamp(35px,5vw,68px)}
+.review-intro h2{font:600 clamp(57px,6vw,105px)/1.06 var(--display);letter-spacing:-.075em;margin:24px 0 0}
+.review-intro h2 em{font:italic 500 .94em var(--serif);color:var(--accent)}
+.review-intro>p{max-width:440px;color:#b3c8c9;font:400 15px/1.8 var(--body);margin:0}
+.review-wall{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.review-card{background:linear-gradient(155deg,#11252d,#0b1820);border:1px solid #3b555c;min-height:315px;padding:clamp(25px,3.5vw,43px);display:flex;flex-direction:column;justify-content:space-between;gap:22px;position:relative;overflow:hidden;min-width:0;box-shadow:inset 0 1px rgba(255,255,255,.035)}
+.review-card::before{content:"";position:absolute;inset:0 auto auto 0;width:78px;height:1px;background:var(--accent);opacity:.75}
+.review-card-alfred{grid-column:span 7;background:linear-gradient(135deg,#102c2c,#101920)}
+.review-card-nathaniel{grid-column:span 5}
+.review-card-jessica,.review-card-carlos,.review-card-nathan{grid-column:span 4}
+.review-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;font:500 10px/1.5 var(--mono);letter-spacing:.08em;color:#aac3c5}
+.review-rating{color:var(--accent);letter-spacing:2px;white-space:nowrap;font:600 16px var(--body)}
+.review-type{color:var(--accent)}
+.review-card blockquote{margin:0}
+.review-card blockquote p{font:400 clamp(17px,1.5vw,21px)/1.7 var(--body);color:#e0edeb;margin:0 0 17px;text-wrap:pretty}
+.review-card blockquote p:last-child{margin:0}
+.review-card-alfred blockquote p{font-size:clamp(16px,1.35vw,20px)}
+.review-card-carlos blockquote p{font:italic 500 clamp(32px,4.3vw,58px)/1.25 var(--serif);color:#ecf3e4;padding:38px 0}
+.review-quotation{font:italic 500 120px/.6 var(--serif);color:var(--accent);height:52px;margin:10px 0}
+.review-identity{border-top:1px solid #7c979444;padding-top:20px;display:flex;align-items:center;gap:14px;margin-top:auto;min-width:0}
+.review-identity img,.review-fallback{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;border:1px solid #9ebfbb66;background:#1b3238}
+.review-fallback{display:grid;place-items:center;color:var(--accent);font:600 25px var(--serif)}
+.review-identity>div:last-child{display:flex;flex-direction:column;min-width:0;gap:5px}
+.review-identity strong{font:650 16px/1.3 var(--display);color:#edf5f2}
+.review-identity span{font:400 11px/1.5 var(--body);color:#aec0c4}
+.review-reference-mark{font:650 clamp(55px,7vw,95px)/1 var(--display);letter-spacing:-.08em;color:#c8f47e;display:flex;justify-content:space-between;align-items:center}
+.review-reference-mark span{font-size:30px;color:#aacbd1}
+.review-reference-body{font:500 clamp(18px,2vw,25px)/1.5 var(--body);color:#e0ece6}
+.review-note{font:400 11px/1.7 var(--body);color:#91a8ab;margin-top:22px;opacity:.85}
+@media(max-width:1100px){.review-card-alfred{grid-column:span 12}.review-card-nathaniel{grid-column:span 12}.review-card-jessica,.review-card-carlos,.review-card-nathan{grid-column:span 4}.review-intro{grid-template-columns:1fr}}
+@media(max-width:780px){.review-card-jessica,.review-card-carlos,.review-card-nathan{grid-column:span 12}.review-card{min-height:0;padding:28px}.review-card-alfred{padding:29px}.review-card blockquote p{font-size:17px}.review-card-carlos blockquote p{font-size:39px;padding:22px 0}.review-intro h2{font-size:clamp(52px,12vw,75px)}.review-quotation{font-size:90px;height:36px}.review-card-top{font-size:9px}.review-rating{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.review-card{transition:none!important}}
