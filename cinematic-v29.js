@@ -156,6 +156,8 @@
       if (phaseReadout) phaseReadout.textContent = phaseNames[phase];
 
     }
+    // Once scrolling begins, the diagram follows the story instead of the idle loop.
+    if (scroll > 80 && current === 0) setPhase(0);
     if (reduced.matches) return;
 
     const heroRect = hero.getBoundingClientRect();
