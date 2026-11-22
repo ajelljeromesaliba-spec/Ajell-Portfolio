@@ -208,9 +208,9 @@ html, body, main { overflow-x: clip; }
     left: -23px;
     width: 2px;
     height: 58px;
-    background: linear-gradient(to bottom,#a6f1c1 0%,
-       #a6f1c1 calc(var(--v29-section-progress,0) * 100%),
-       rgba(143,205,168,.2) calc(var(--v29-section-progress,0) * 100%));
+    background: linear-gradient(180deg,#c2f5ce,#78c4af);
+    transform: scaleY(var(--v29-section-progress,0));
+    transform-origin: top center;
   }
 }
 .hero-city-photo img { animation: none; transform: translate3d(0,var(--v29-hero-shift,0px),0) scale(1.035); will-change: transform; }
