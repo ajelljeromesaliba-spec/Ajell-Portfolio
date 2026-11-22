@@ -92,7 +92,10 @@
         const p = clamp((vh-rect.top)/(vh+rect.height));
         const drift = lerp(-18,18,ease(p));
         const frame = frames[i];
-        if(frame) frame.style.setProperty("--v33-drift",drift.toFixed(1)+"px");
+        if(frame) {
+          frame.style.setProperty("--v33-drift",drift.toFixed(1)+"px");
+          frame.style.setProperty("--v33-angle",(lerp(i===0?-7:7,i===0?7:-7,ease(p))).toFixed(2)+"deg");
+        }
         section.style.setProperty("--v33-scan",(lerp(-16,115,p)).toFixed(1)+"%");
       });
       if (projectArt) {
