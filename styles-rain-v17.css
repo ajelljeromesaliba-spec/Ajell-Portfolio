@@ -1,0 +1,23 @@
+/* V17: Wet portrait, continuously moving rainfall; no sliding blackout curtain. */
+.noir-track{height:180svh}
+.noir-sticky{background:#06080b;isolation:isolate}
+.noir-image{z-index:0}
+.noir-image img{filter:grayscale(1) contrast(1.09) brightness(.93)}
+.noir-image::after{background:linear-gradient(90deg,rgba(0,0,0,.48),rgba(0,0,0,.07) 70%),linear-gradient(0deg,rgba(0,0,0,.62),transparent 48%)}
+.noir-weather{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;contain:paint}
+.noir-weather::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 23% 55%,transparent 25%,rgba(2,8,12,.20) 100%),linear-gradient(90deg,rgba(183,203,211,.035),transparent 24%,rgba(215,233,240,.035) 80%,transparent);z-index:1}
+.noir-rain-canvas{display:block;width:100%;height:100%;pointer-events:none;opacity:.98}
+.noir-content,.noir-index{z-index:4}
+.noir-content{filter:drop-shadow(0 3px 13px rgba(0,0,0,.65))}
+.noir-content>p{color:#f2f5f4}
+.noir-content em{color:#d9e3e3}
+.noir-index{color:#d9e5e4}
+@media(max-width:690px){
+ .noir-track{height:170svh}
+ .noir-image img{object-position:65% 39%}
+ .noir-image::after{background:linear-gradient(0deg,rgba(0,0,0,.58) 0%,transparent 48%),linear-gradient(90deg,rgba(0,0,0,.24),transparent 67%)}
+ .noir-content{top:61%;left:6%;width:88%}
+ .noir-content>p{font-size:clamp(37px,9.5vw,55px);line-height:1.14}
+ .noir-index{right:6%;bottom:6%;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.noir-rain-canvas{opacity:.55}}
