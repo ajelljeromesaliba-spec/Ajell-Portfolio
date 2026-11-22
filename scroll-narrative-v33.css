@@ -1,0 +1,295 @@
+/* V33: A consistent visual rhythm from the hero to the final contact.
+   Motion uses composited transforms, opacity and CSS variables set on scroll.
+   The original photography, copy, navigation, and card geometry remain intact. */
+
+@media (min-width: 821px) and (prefers-reduced-motion: no-preference) {
+  /* The orbital workflow reacts to the cursor without blocking its four links. */
+  .v31-workflow {
+    translate: var(--v33-orbit-x,0px) var(--v33-orbit-y,0px);
+    transition: translate .48s cubic-bezier(.2,.75,.2,1);
+  }
+  .v33-motion .hero-copy > .hero-kicker {
+    animation: v33-first-reveal .8s cubic-bezier(.2,.75,.2,1) both;
+  }
+  .v33-motion .hero-copy > h1 {
+    animation: v33-first-reveal 1s .09s cubic-bezier(.2,.75,.2,1) both;
+  }
+  .v33-motion .hero-copy > .hero-lead {
+    animation: v33-first-reveal .9s .21s cubic-bezier(.2,.75,.2,1) both;
+  }
+  .v33-motion .hero-copy > .hero-description,
+  .v33-motion .hero-copy > .hero-actions {
+    animation: v33-first-reveal .95s .31s cubic-bezier(.2,.75,.2,1) both;
+  }
+  @keyframes v33-first-reveal {
+    from { opacity: .15; translate: 0 29px; filter: blur(4px); }
+    to { opacity: 1; translate: 0 0; filter: blur(0); }
+  }
+
+  /* A single progress signal runs through the existing chapter rail. */
+  .v29-rail { isolation: isolate; }
+  .v29-rail::before,
+  .v29-rail::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    left: 50%;
+    top: 20px;
+    bottom: 20px;
+    transform-origin: center top;
+    pointer-events: none;
+  }
+  .v29-rail::before { background: rgba(167,221,190,.19); }
+  .v29-rail::after {
+    background: linear-gradient(#c7f7d0,#7ac9b0,#b5e6d5);
+    transform: scaleY(var(--v33-page,0));
+    box-shadow: 0 0 9px rgba(157,241,190,.5);
+  }
+
+  /* A lit line appears at the foot of every chapter as it is completed. */
+  #expertise,#systems-bridge,#selected-work,#case-studies,
+  #rain-scene,#experience,#voices,#about,#contact { position: relative; }
+  #expertise::after,#systems-bridge::after,#selected-work::after,
+  #case-studies::after,#rain-scene::after,#experience::after,
+  #voices::after,#about::after,#contact::after {
+    content:""; position:absolute; z-index:6;
+    left:0; right:0; bottom:0; height:2px;
+    background:linear-gradient(90deg,transparent 5%,rgba(161,234,190,.68) 43%,rgba(216,248,219,.85) 55%,transparent 95%);
+    transform:scaleX(var(--v33-line,0));
+    transform-origin:left center;
+    pointer-events:none;
+    opacity:.7;
+  }
+
+  /* Headings rise in the same order and pace as each chapter's story. */
+  .section-heading h2,
+  .experience .section-opening h2,
+  .voices-section .section-opening h2,
+  .contact-layout h2,
+  .about-text h2 {
+    translate: 0 var(--v33-heading-shift,0px);
+    opacity: var(--v33-heading-opacity,1);
+    will-change: translate;
+  }
+  .section-heading .eyebrow,
+  .section-opening > .eyebrow {
+    position:relative;
+    padding-left: 19px;
+  }
+  .section-heading .eyebrow::before,
+  .section-opening > .eyebrow::before {
+    content:""; position:absolute; left:0; top:1px; bottom:1px;
+    width:2px; border-radius:2px;
+    background:currentColor; opacity:.7;
+    transform:scaleY(var(--v33-heading-line,0));
+    transform-origin: top;
+  }
+
+  /* Expertise: scan across one real capability at a time. */
+  .expertise-item { position:relative; overflow:hidden; isolation:isolate; }
+  .expertise-item::after {
+    content:""; pointer-events:none; position:absolute;
+    z-index:0; inset:0;
+    background:linear-gradient(110deg,transparent 20%,rgba(70,145,113,.09) 44%,rgba(114,197,148,.18) 50%,transparent 67%);
+    transform: translateX(var(--v33-wipe,-130%));
+    opacity:.76;
+  }
+  .expertise-item > * { position:relative; z-index:1; }
+  .expertise-item h3,
+  .expertise-item p,
+  .expertise-item .skill-tags {
+    translate: 0 var(--v33-rise,0px);
+    opacity: var(--v33-fade,1);
+  }
+  .expertise-item .item-no {
+    color:#3f7d66;
+    text-shadow:0 0 15px rgba(69,163,109,.14);
+  }
+  .skill-tags span {
+    transition: background .35s, color .35s, border-color .35s;
+  }
+  .expertise-item:hover .skill-tags span {
+    background:rgba(97,172,126,.08);
+    border-color:rgba(52,112,86,.38);
+  }
+
+  /* The two photographic chapters remain centered in their frames.
+     A traveling scan makes the systems/photo moment feel connected to QA. */
+  #systems-bridge .systems-photo-image,
+  #rain-scene .noir-image {
+    translate: 0 var(--v33-drift,0px);
+    will-change: translate;
+  }
+  #systems-bridge .systems-photo-image::after,
+  #rain-scene .noir-image::after {
+    content:""; position:absolute; z-index:2; pointer-events:none;
+    left:0; right:0; height:58px;
+    top:var(--v33-scan,-16%);
+    background:linear-gradient(180deg,transparent,rgba(181,255,210,.095),rgba(183,240,210,.045),transparent);
+    mix-blend-mode:screen;
+  }
+  #systems-bridge .systems-photo-copy .eyebrow,
+  #systems-bridge .systems-photo-copy > p:not(.eyebrow),
+  #systems-bridge .systems-photo-copy a {
+    text-shadow:0 10px 35px rgba(0,0,0,.3);
+  }
+  #systems-bridge .systems-photo-copy > p:not(.eyebrow) {
+    translate:0 calc(var(--v33-drift,0px) * -.48);
+  }
+  #rain-scene .rain-scene-copy p {
+    text-shadow:0 6px 30px rgba(0,0,0,.48),0 0 40px rgba(195,238,213,.09);
+    translate:0 calc(var(--v33-drift,0px) * -.36);
+  }
+  #rain-scene .noir-sticky::before {
+    content:""; pointer-events:none; position:absolute; inset:0; z-index:1;
+    background:radial-gradient(ellipse at var(--v33-spot,70%) 38%,rgba(170,204,203,.09),transparent 55%);
+    opacity:.9;
+  }
+
+  /* Project chapter: a slowly swept technical dial, visible behind actual work. */
+  .project-art::after {
+    content:""; position:absolute; z-index:1; pointer-events:none;
+    width:min(78%,520px); aspect-ratio:1; border-radius:50%;
+    background:
+      repeating-radial-gradient(circle,transparent 0 35px,rgba(185,242,203,.14) 36px,transparent 37px),
+      conic-gradient(from 10deg,transparent 0 29%,rgba(167,239,195,.17) 31%,transparent 33% 62%,rgba(164,234,199,.1) 65%,transparent 67%);
+    border:1px solid rgba(164,238,183,.17);
+    transform:rotate(var(--v33-project-turn,0deg)) perspective(900px) rotateX(52deg);
+    opacity:.9;
+    box-shadow:0 0 65px rgba(147,221,179,var(--v33-project-bright,.13));
+  }
+  .project-typography > span { translate:0 calc(var(--v33-project-slide,0px) * -.28); }
+  .project-typography > strong {
+    translate:0 calc(var(--v33-project-slide,0px) * .30);
+    text-shadow:0 9px 22px rgba(0,0,0,.4),0 0 38px rgba(164,243,188,.2);
+  }
+  .project-copy h3, .secondary-project-copy h3 {
+    translate:0 var(--v33-rise,0px);
+    opacity:var(--v33-fade,1);
+  }
+  .featured-project-main .project-facts > div {
+    transition: background .28s, border-color .28s;
+  }
+  .featured-project-main .project-facts > div:hover {
+    background:rgba(141,230,173,.045);
+    border-color:rgba(170,242,199,.4);
+  }
+
+  /* Case studies: the verification line is drawn with scroll progression. */
+  .case-row { position:relative; }
+  .case-row::after {
+    content:""; position:absolute; bottom:-1px; left:0; right:0; height:2px;
+    background:linear-gradient(90deg,#326e5d,#97d9aa,transparent);
+    transform:scaleX(var(--v33-entry,0));
+    transform-origin:left;
+    pointer-events:none;
+  }
+  .case-row .case-title {
+    translate:0 var(--v33-rise,0px);
+    opacity:var(--v33-fade,1);
+  }
+  .case-row .case-detail {
+    translate:0 calc(var(--v33-rise,0px) * .55);
+    opacity:var(--v33-fade,1);
+  }
+
+  /* Experience is one connected career path, not isolated accordion rows. */
+  .experience-shell { position:relative; }
+  .experience-list { position:relative; }
+  .experience-item { position:relative; }
+  .experience-item::before {
+    content:""; position:absolute; top:0; bottom:0; left:-13px; width:2px;
+    background:linear-gradient(180deg,rgba(158,236,191,.15),rgba(158,236,191,.85));
+    transform:scaleY(var(--v33-entry,0));
+    transform-origin:top; pointer-events:none;
+  }
+  .experience-item[open]::before {
+    background:linear-gradient(180deg,#d4fbe0,#86d8b6);
+    box-shadow:0 0 18px rgba(168,236,188,.34);
+  }
+  .experience-item summary {
+    opacity:var(--v33-fade,1);
+    translate:0 calc(var(--v33-rise,0px) * .38);
+  }
+  .experience-portrait::after {
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(155deg,transparent 43%,rgba(200,246,216,.12) 50%,transparent 59%);
+    background-size:260% 260%;
+    animation:v33-portrait-glint 11s ease-in-out infinite;
+  }
+  @keyframes v33-portrait-glint {
+    0%,22%,100%{background-position:140% 140%;opacity:0}
+    35%,48%{opacity:.55}
+    62%{background-position:0% 0%;opacity:0}
+  }
+
+  /* The reviews keep their exact sizes and full copy, while each entry is revealed. */
+  .voices-grid .voice { position:relative; overflow:hidden; }
+  .voices-grid .voice::before {
+    content:""; position:absolute; z-index:1;
+    inset:0 auto auto 0; height:3px; width:100%;
+    background:linear-gradient(90deg,#7dc9ab,#c7f3d5,#7dc9ab);
+    transform:scaleX(var(--v33-entry,0)); transform-origin:left;
+    pointer-events:none;
+  }
+  .voices-grid .voice::after {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(110deg,transparent 20%,rgba(149,239,187,.055) 50%,transparent 70%);
+    transform:translateX(var(--v33-wipe,-130%));
+  }
+  .voices-grid .voice blockquote {
+    translate:0 calc(var(--v33-rise,0px) * .65);
+    opacity:var(--v33-fade,1);
+  }
+  .voices-grid .voice-person {
+    translate:0 calc(var(--v33-rise,0px) * .32);
+  }
+  .voice-person img { transition:box-shadow .35s,border-color .35s; }
+  .voice:hover .voice-person img {
+    box-shadow:0 0 0 3px rgba(161,238,187,.12);
+    border-color:rgba(205,246,214,.67);
+  }
+
+  /* Personal account flows toward a deliberate invitation at the bottom. */
+  .about-section { isolation:isolate; overflow:hidden; }
+  .about-section::before {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse at var(--v33-spot,40%) 50%,rgba(83,152,115,.10),transparent 54%);
+    opacity:.8;
+  }
+  .about-text > p:not(.eyebrow), .about-text .text-link {
+    translate:0 calc(var(--v33-rise,0px) * .6);
+    opacity:var(--v33-fade,1);
+  }
+  .contact-section { isolation:isolate; overflow:hidden; }
+  .contact-section::before {
+    content:"";position:absolute;inset:-15%;pointer-events:none;
+    background:radial-gradient(circle at var(--v33-spot,52%) 46%,rgba(139,219,172,.11),transparent 45%);
+    opacity:.85;
+  }
+  .contact-section .container { position:relative;z-index:2; }
+  .contact-section .contact-actions > .button-primary {
+    box-shadow:0 0 0 1px rgba(190,239,203,.16),0 12px 40px rgba(116,206,145,.08);
+    transition:box-shadow .3s,transform .3s,background .3s;
+  }
+  .contact-section .contact-actions > .button-primary:hover {
+    transform:translateY(-3px);
+    box-shadow:0 0 0 1px rgba(190,239,203,.34),0 20px 56px rgba(116,206,145,.24);
+  }
+}
+
+/* Tablet and mobile retain their already-approved composition and reading speed.
+   The top progress indicator and existing rain effect continue to function. */
+@media (max-width: 820px) {
+  .v33-motion .section-heading h2,
+  .v33-motion .experience .section-opening h2,
+  .v33-motion .voices-section .section-opening h2 { will-change:auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v33-motion *, .v33-motion *::before, .v33-motion *::after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+  }
+}
