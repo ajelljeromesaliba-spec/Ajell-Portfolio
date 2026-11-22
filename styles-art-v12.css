@@ -12,7 +12,7 @@
 .hero-art-center{position:absolute;inset:28%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .hero-art-center span{font:500 9px/1.5 var(--mono);letter-spacing:.2em;color:#c7e1d8}
 .hero-art-center b{font:700 clamp(22px,2.6vw,40px)/1.02 var(--display);letter-spacing:-.07em;color:#effbf5;margin-top:15px}
-.hero-art-words{position:absolute;z-index:2;left:8%;top:50%;transform:translateY(-50%);width:51%;will-change:transform}
+.hero-art-words{position:absolute;z-index:2;left:8%;top:28%;width:51%;will-change:transform}
 .hero-art-eyebrow{font:500 10px/1.6 var(--mono);letter-spacing:.14em;color:var(--accent)}
 .hero-art-words h2{font:650 clamp(50px,6vw,96px)/1.05 var(--display);letter-spacing:-.08em;margin:24px 0;color:#f2f8f5}
 .hero-art-words h2 em{font:italic 500 .95em var(--serif);color:var(--accent)}
