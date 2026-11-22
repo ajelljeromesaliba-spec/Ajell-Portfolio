@@ -273,3 +273,8 @@ img { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .editorial-rain .rain-scene-link { transition: none; }
 }
+
+/* V32 mobile safeguard: preserve the original compact portrait scene. */
+@media (max-width: 620px) {
+  .editorial-rain .rain-scene-link { display: none; }
+}
