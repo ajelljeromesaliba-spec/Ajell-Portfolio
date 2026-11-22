@@ -1,0 +1,29 @@
+/* V24: a visible scene-to-scene camera, not just a progress line */
+#cinematicContinuity{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:23;opacity:.82;mix-blend-mode:screen;contain:strict}
+.cine-timecode{position:fixed;left:clamp(14px,2vw,30px);top:calc(var(--header,76px) + 20px);z-index:52;pointer-events:none;display:flex;gap:8px;align-items:center;padding:7px 11px;background:rgba(4,18,17,.72);border-left:2px solid #a4e6c6;box-shadow:0 8px 24px #0006;backdrop-filter:blur(7px);color:#cdf8d9;font:500 10px/1.3 var(--mono,monospace);letter-spacing:.1em}
+.cine-timecode span{font-size:13px}.cine-timecode small{font-size:9px;opacity:.85;white-space:nowrap}
+@media(min-width:691px){.hero-track{height:255svh}.story-track{height:500svh}.noir-track{height:260svh}.manifesto{min-height:125svh}.work-entry{min-height:93svh}}
+@media(max-width:690px){.hero-track{height:215svh}.story-track{height:425svh}.noir-track{height:245svh}.manifesto{min-height:113svh}
+ #cinematicContinuity{opacity:.82;mix-blend-mode:screen}
+ .cine-timecode{top:calc(var(--header,68px) + 9px);left:12px;padding:6px 8px;font-size:8px}.cine-timecode small{font-size:8px}
+}
+/* Explicit transform values from JS: no unsupported arithmetic in CSS calc(). */
+@media(prefers-reduced-motion:no-preference){
+ .hero-image img{transform:translate3d(0,var(--cin-y,0px),0) scale(var(--cin-scale,1.04)) !important;transform-origin:60% 45%;will-change:transform}
+ .story-image img{transform:translate3d(0,var(--cin-y,0px),0) scale(var(--cin-scale,1.1)) !important;will-change:transform}
+ .story-image{transform:perspective(1200px) rotateY(var(--cin-rotate,0deg)) translateY(var(--cin-y,0px)) !important;will-change:transform}
+ .thread-cinema{transform:perspective(1200px) translateY(var(--cin-y,0px)) rotateY(var(--cin-rotate,0deg)) scale(var(--cin-scale,1)) !important;transform-origin:50% 45%;will-change:transform}
+ .work-entry .work-visual{transform:perspective(1050px) translateY(var(--cin-y,0px)) rotateY(var(--cin-rotate,0deg)) scale(var(--cin-scale,1)) !important;transform-origin:50% 50%;will-change:transform;transition:box-shadow .25s !important}
+ .noir-image img{transform:translate3d(0,var(--cin-y,0px),0) scale(var(--cin-scale,1.1)) !important;will-change:transform}
+ .experience-portrait img{transform:translate3d(0,var(--cin-y,0px),0) scale(var(--cin-scale,1.05)) !important;will-change:transform}
+ .js .voice[data-reveal].is-visible{transform:perspective(1200px) translateY(var(--cin-y,0px)) rotateY(var(--cin-rotate,0deg)) !important;transition:opacity .5s ease !important;will-change:transform}
+ .closing-orbit{transform:rotate(var(--cin-rotate,0deg)) scale(var(--cin-scale,1)) !important;will-change:transform}
+ .work-entry .work-visual::after{opacity:.29 !important;mix-blend-mode:screen}
+}
+@media(max-width:690px){
+ .work-entry .work-visual{transform:perspective(1050px) translateY(var(--cin-y,0px)) rotateY(var(--cin-rotate,0deg)) scale(var(--cin-scale,1)) !important}
+}
+@media(prefers-reduced-motion:reduce){#cinematicContinuity{display:none}.cine-timecode{opacity:.9}}
+
+/* Prevent the off-axis 3D planes from expanding the layout sideways. Clip does not create a scroll container. */
+html,body,main{overflow-x:clip}
