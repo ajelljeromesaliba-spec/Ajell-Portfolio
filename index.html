@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="Ajell Saliba's personal portfolio: customer support and leadership, websites, GoHighLevel CRM, API and webhook integrations, DNS, email delivery, and client operations.">
   <meta name="author" content="Ajell Saliba">
-  <meta name="site-release" content="ajell-personal-v22-nathan-20261122">
+  <meta name="site-release" content="ajell-personal-v23-connected-scroll-20261122">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ajell Saliba | Personal Archive">
   <meta property="og:description" content="People. Systems. The work behind the work. A personal portfolio by Ajell Saliba.">
@@ -24,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap">
   <link rel="preload" href="assets/hero-city.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="styles-qa-v22.css">
-  <script src="script-qa-v20.js" defer></script>
+  <link rel="stylesheet" href="styles-qa-v22.css?v=23">
+  <script src="script-qa-v20.js?v=23" defer></script>
   <title>Ajell Saliba | Personal Archive</title>
 </head>
 <body>
@@ -39,6 +39,14 @@
   </header>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" inert><a href="#about">01 / My story</a><a href="#selected-work">02 / Selected work</a><a href="#experience">03 / Experience</a><a href="#voices">04 / People</a><a href="#contact">05 / Contact</a></nav>
 
+
+  <div class="sequence-atmosphere" id="sequenceAtmosphere" aria-hidden="true"><div class="sequence-halo" id="sequenceHalo"></div><div class="sequence-scan" id="sequenceScan"></div></div>
+  <nav class="sequence-rail" id="sequenceRail" aria-label="Portfolio chapter progress">
+    <div class="sequence-number"><strong id="sequenceNumber">01</strong><small>/08</small></div>
+    <div class="sequence-track" aria-hidden="true"><span id="sequenceTrackFill"></span></div>
+    <div class="sequence-marks"><a href="#home" data-sequence-link="0" aria-label="Jump to origin chapter"><i></i></a><a href="#about" data-sequence-link="1" aria-label="Jump to the journey chapter"><i></i></a><a href="#the-thread" data-sequence-link="2" aria-label="Jump to the signal chapter"><i></i></a><a href="#selected-work" data-sequence-link="3" aria-label="Jump to selected work chapter"><i></i></a><a href="#rain-scene" data-sequence-link="4" aria-label="Jump to the human side chapter"><i></i></a><a href="#experience" data-sequence-link="5" aria-label="Jump to experience chapter"><i></i></a><a href="#voices" data-sequence-link="6" aria-label="Jump to people chapter"><i></i></a><a href="#contact" data-sequence-link="7" aria-label="Jump to next chapter chapter"><i></i></a></div>
+    <span class="sequence-caption" id="sequenceCaption">ORIGIN</span>
+  </nav>
   <main>
     <!-- 01. The introduction is a photograph, not a sales hero. -->
     <section class="hero-track" id="home" aria-labelledby="homeTitle"><div class="hero-sticky">
@@ -125,7 +133,7 @@
     </div></section>
 
     <!-- 05. Noir portrait becomes a full-screen visual beat, not a gallery. -->
-    <section class="noir-track" aria-label="A cinematic rain scene"><div class="noir-sticky"><div class="noir-image" aria-hidden="true"><img src="assets/rain-editorial.webp" width="880" height="1100" loading="lazy" decoding="async" alt=""></div><div class="noir-weather" aria-hidden="true"><canvas id="noirRainCanvas" class="noir-rain-canvas"></canvas></div><div class="noir-content"><span class="eyebrow">04 / THE HUMAN SIDE</span><p>A human story,<br><em>after all.</em></p><small>ABOUT THE PEOPLE ON THE OTHER END.</small></div><div class="noir-index" aria-hidden="true">A QUIETER MOMENT / 2026</div></div></section>
+    <section class="noir-track" id="rain-scene" aria-label="A cinematic rain scene"><div class="noir-sticky"><div class="noir-image" aria-hidden="true"><img src="assets/rain-editorial.webp" width="880" height="1100" loading="lazy" decoding="async" alt=""></div><div class="noir-weather" aria-hidden="true"><canvas id="noirRainCanvas" class="noir-rain-canvas"></canvas></div><div class="noir-content"><span class="eyebrow">04 / THE HUMAN SIDE</span><p>A human story,<br><em>after all.</em></p><small>ABOUT THE PEOPLE ON THE OTHER END.</small></div><div class="noir-index" aria-hidden="true">A QUIETER MOMENT / 2026</div></div></section>
 
     <!-- 06. Complete career record stays accessible, grouped without invented account details. -->
     <section class="experience section-pad" id="experience" aria-labelledby="experienceTitle"><div class="container"><header class="section-opening"><span class="eyebrow">05 / THE COMPLETE RECORD</span><div class="opening-line"><h2 id="experienceTitle">The<br><em>timeline.</em></h2><p>Seven employers. Support across banking and ISP accounts, phone, email, chat, collections, SME work, QA, leadership and technical delivery. Select a role to read the details.</p></div></header>
