@@ -136,6 +136,7 @@
   measure();setMotion(motion);schedule();
 })();
 
+
 /* V16 original code-rain and interactive cyber art. No libraries, no network calls. */
 (() => {
   'use strict';
@@ -175,15 +176,25 @@
     const rect=layer.canvas.getBoundingClientRect();
     const w=Math.max(1,Math.round(rect.width)), h=Math.max(1,Math.round(rect.height));
     const lite=state.mode==='lite';
-    // Use a 1x backing store on phones: 2x/3x retina is wasteful for tiny glyphs.
-    const dpr=Math.min(window.devicePixelRatio||1,coarse?1:1.25);
+    // Render at CSS-pixel font sizes with a modest retina backing store.
+    // A 1x canvas was making large characters look soft on high-DPI iPhones.
+    const dpr=Math.min(window.devicePixelRatio||1,coarse?1.5:1.6);
     layer.canvas.width=Math.round(w*dpr);layer.canvas.height=Math.round(h*dpr);
     layer.ctx.setTransform(dpr,0,0,dpr,0,0);
-    layer.w=w;layer.h=h;layer.font=layer.panel?(lite?15:14):(lite?19:16);
-    layer.gap=layer.panel?(lite?19:15):(lite?24:18);
-    const max=layer.panel?(lite?24:56):(lite?36:92);
-    const n=Math.min(max,Math.max(8,Math.ceil(w/layer.gap)));
-    layer.cols=Array.from({length:n},(_,i)=>({x:(i+.5)*w/n,phase:Math.random()*(h+180),speed:(layer.panel?44:37)+Math.random()*(layer.panel?112:94),seed:Math.floor(Math.random()*glyphs.length),trail:layer.panel?(lite?9:15):(lite?7:12)}));
+    layer.w=w;layer.h=h;
+    // Small, evenly proportioned monospace glyphs, with ~2x the phone columns.
+    layer.font=layer.panel?(lite?10:9):(lite?10:9);
+    layer.line=layer.font+2;
+    layer.gap=layer.panel?(lite?11:9):(lite?12:10);
+    const max=layer.panel?(lite?52:92):(lite?90:148);
+    const n=Math.min(max,Math.max(10,Math.ceil(w/layer.gap)));
+    layer.cols=Array.from({length:n},(_,i)=>({
+      x:(i+.5)*w/n,phase:Math.random()*(h+layer.line*12),
+      speed:(layer.panel?37:31)+Math.random()*(layer.panel?97:81),
+      seed:Math.floor(Math.random()*glyphs.length),
+      shade:.55+Math.random()*.45,
+      trail:layer.panel?(lite?10:14):(lite?8:12)
+    }));
   }
   function setup(){state.mode=readMode();layers.forEach(setupLayer);state.last=0;}
   let activePanel=true;
@@ -193,17 +204,17 @@
   function renderLayer(layer,elapsed,delta){
     const ctx=layer.ctx,w=layer.w,h=layer.h, panel=layer.panel, lite=state.mode==='lite';
     ctx.clearRect(0,0,w,h);
-    ctx.textAlign='center';ctx.textBaseline='top';ctx.font=`${layer.font}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+    ctx.textAlign='center';ctx.textBaseline='top';ctx.font=`${layer.font}px "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace`;
     const advance=Math.min(.075,Math.max(0,delta/1000));
     for(let c=0;c<layer.cols.length;c++){
-      const col=layer.cols[c];col.phase=(col.phase+col.speed*advance)%(h+col.trail*layer.font+80);
-      const head=col.phase-col.trail*layer.font;
+      const col=layer.cols[c];col.phase=(col.phase+col.speed*advance)%(h+col.trail*layer.line+80);
+      const head=col.phase-col.trail*layer.line;
       for(let k=0;k<col.trail;k++){
-        const y=head-k*layer.font;
+        const y=head-k*layer.line;
         if(y<0||y>h-layer.font)continue;
         const intensity=Math.pow(1-k/col.trail,1.1);
-        const alpha=(panel?.08:.055)+intensity*(panel?(lite?.67:.82):(lite?.45:.64));
-        const glyph=glyphs[(col.seed+Math.floor(elapsed/200)+k*7+c*3)%glyphs.length];
+        const alpha=((panel?.07:.05)+intensity*(panel?(lite?.66:.8):(lite?.43:.6)))*col.shade;
+        const glyph=glyphs[(col.seed+Math.floor(elapsed/(160+(c%5)*32))+k*7+c*3)%glyphs.length];
         ctx.fillStyle=k===0?`rgba(207,255,223,${Math.min(1,alpha+.22).toFixed(3)})`: `rgba(${panel?121:107},${panel?255:246},${panel?177:160},${alpha.toFixed(3)})`;
         ctx.fillText(glyph,col.x,y);
       }

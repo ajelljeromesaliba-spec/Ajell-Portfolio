@@ -1,7 +1,7 @@
 /* V16: original cyber-noir personal portfolio, lightweight falling code and glass sculpture */
 :root{--cyber-green:#9bf6ae;--cyber-mint:#5af5c1;--cyber-blue:#6ddacb;--cyber-ink:#06100e}
-#matrixRainCanvas{position:fixed;inset:0;display:block;width:100vw;height:100dvh;z-index:67;pointer-events:none;opacity:.36;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.3) 30%,#000 100%);mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.3) 30%,#000 100%)}
-[data-motion="lite"] #matrixRainCanvas{opacity:.25}
+#matrixRainCanvas{position:fixed;inset:0;display:block;width:100%;height:100dvh;z-index:67;pointer-events:none;opacity:.33;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.3) 30%,#000 100%);mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.3) 30%,#000 100%)}
+[data-motion="lite"] #matrixRainCanvas{opacity:.26}
 .site-header{background:rgba(3,12,13,.92);border-bottom-color:#71e3a544}
 .brand strong{color:#e2ffe7}.page-progress span{background:linear-gradient(90deg,#50a48a,#b0ff92)}
 .hero-shade{background:linear-gradient(90deg,#020b0fe9 2%,#020c0fd4 26%,#06121c8a 50%,#02090f34 82%),linear-gradient(0deg,#020809ec,transparent 53%,#030b1061)}
@@ -34,7 +34,7 @@
 .thread-cinema{grid-row:2;grid-column:2;position:relative;height:clamp(500px,44vw,690px);isolation:isolate;overflow:hidden;contain:paint;border:1px solid #89f5b45b;background:radial-gradient(ellipse at 44% 46%,#123b2c 1%,#071b19 41%,#031014 73%,#020809);box-shadow:0 24px 100px #020b096e,0 0 0 1px #1a3d32 inset;min-width:0}
 .thread-cinema::before{content:"";position:absolute;inset:14px;border:1px solid #8effb32b;z-index:3;pointer-events:none}
 .thread-cinema::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#020e14a6,transparent 28%,transparent 70%,#05120f85),linear-gradient(0deg,#021511bd,transparent 40%,#05151e22 70%)}
-#threadRainCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.88}
+#threadRainCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.84}
 .thread-haze{position:absolute;inset:8%;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,#71f5a933,transparent 64%)}
 .thread-scanline{position:absolute;z-index:2;inset:-120% 0 auto;height:130%;pointer-events:none;background:linear-gradient(180deg,transparent,#9dfdcc0c 45%,#a0ffcb28 50%,transparent 55%);animation:cyberScan 9s ease-in-out infinite}
 @keyframes cyberScan{to{transform:translateY(220%)}}
