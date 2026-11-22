@@ -1,18 +1,23 @@
-# Ajell Saliba / Personal Archive V14
+# Ajell Saliba | Personal Portfolio
 
-A cinematic, photography-led personal portfolio. Static HTML/CSS/JavaScript deployed through the `Ajell-Portfolio` GitHub repository to Cloudflare Workers.
+Personal portfolio, deployed as a static Cloudflare Worker from the `main` branch.
 
-## Files
+## Site content
+- A cinematic photo-led introduction and three-part career story
+- One interactive visual chapter with optional Lite and Full motion
+- Three selected work examples: ConnectiveStack, technical integrations, and ProClick
+- Seven employers covering BPO, collections, support leadership, and web/CRM implementation
+- Five feedback/reference entries with supplied portraits
+- A print-ready résumé at `/resume-v2.html`
 
-- `index.html`: main website, original case study text, 7 employers, 5 reviews
-- `styles-v13.css`: retained structural and content-specific styling
-- `styles-v14.css`: cinematic redesign and responsive art direction
-- `script-v14.js`: scroll-linked perspective, chapter progression, motion intensity and accessible navigation
-- `assets/`: optimized portrait and reviewer photographs, monogram, favicon and social image
-- `resume-v2.html`: printable résumé retained in GitHub repo
+## Production assets
+- `index.html`: page content and navigation
+- `styles-qa-v20.css`: active styles combined in their existing cascade order
+- `script-qa-v20.js`: site interactions, Matrix-style code rain, and the portrait rain effect
+- `assets/`: photos, reviewer portraits, monogram and social media artwork
+- `wrangler.jsonc`: Cloudflare Workers static assets configuration
 
-The site intentionally does not pitch services as a business. Its focus is personal identity, experience, selected work and people who have worked with Ajell. Four private/public case studies and the five testimonial/reference entries have been retained from the established source. Where exact quotes were unavailable, a professional reference is labeled as such.
+The portfolio distinguishes linked public work from anonymized private work. Nathan Justice's entry is a professional reference, not a direct quotation.
 
-## Performance
-
-Mobile starts in Lite mode; Full is opt-in and the motion toggle is functional. Animation uses scroll-progress transforms and opacity, while `prefers-reduced-motion` is respected. No WebGL library or paid infrastructure is required. V14 is intended to remain compatible with the existing Cloudflare Worker / GitHub deployment.
+## Deployment
+Publish the repository's `main` branch to the Cloudflare Worker `ajell-portfolio`. The Worker serves static files from the repository root. No server API keys or secrets are embedded in the site.
