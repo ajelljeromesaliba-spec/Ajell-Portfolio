@@ -1,0 +1,13 @@
+/* Review improvements - real reviewer portraits and simplified reference */
+.review-identity-alfred img {width:70px;height:70px;border-radius:50%;object-fit:cover;object-position:center;border:2px solid #c4e8cb8a;box-shadow:0 0 0 6px #9bdcc516}
+.review-identity-alfred strong {font-size:19px}
+.review-card-nathan .reference-profile {display:grid;grid-template-columns:116px minmax(0,1fr);gap:20px;align-items:center;padding:12px 0 24px;border-bottom:1px solid #9abfbd36}
+.review-card-nathan .reference-profile img {width:116px;height:126px;object-fit:cover;object-position:center top;border-radius:12px;border:1px solid #a4bfbb6f}
+.review-card-nathan .reference-profile h3 {font:700 clamp(24px,2.7vw,36px)/1.12 var(--display);letter-spacing:-.05em;color:#f1f7f3;margin:8px 0}
+.review-card-nathan .reference-profile p {font:400 13px/1.5 var(--body);color:#bfd0ce;margin:0}
+.review-card-nathan .reference-context {font:500 10px/1.5 var(--mono);letter-spacing:.07em;color:var(--accent)}
+.review-card-nathan .review-reference-body {font:400 clamp(17px,1.45vw,21px)/1.7 var(--body);margin:0;color:#e0ece9}
+.review-card-nathan .reference-focus {display:flex;gap:8px;flex-wrap:wrap;margin-top:5px}
+.review-card-nathan .reference-focus span {font:500 10px/1.5 var(--mono);color:#bde6c6;border:1px solid #9acd9d5d;padding:9px 10px;background:#a6d3a70b}
+.review-card-nathan {gap:23px;justify-content:start}
+@media(max-width:780px){.review-card-nathan .reference-profile{grid-template-columns:90px minmax(0,1fr);gap:14px;padding:0 0 19px}.review-card-nathan .reference-profile img{width:90px;height:98px}.review-card-nathan .reference-profile h3{font-size:25px}.review-card-nathan .reference-context{font-size:8px}.review-card-nathan .review-reference-body{font-size:16px}.review-identity-alfred img{width:62px;height:62px}}
