@@ -49,8 +49,9 @@
   const pauseState = () => reduced.matches || userPaused || hovered || focused || dragging ||
     !visible || document.hidden || pausedByInteraction;
   const syncButton = () => {
-    pauseButton.textContent = userPaused || reduced.matches ? "Play" : "Pause";
-    pauseButton.setAttribute("aria-label",userPaused || reduced.matches ? "Play feedback movement" : "Pause feedback movement");
+    pauseButton.textContent = reduced.matches ? "Motion off" : (userPaused ? "Play" : "Pause");
+    pauseButton.disabled = reduced.matches;
+    pauseButton.setAttribute("aria-label",reduced.matches ? "Automatic movement disabled by reduced-motion setting" : (userPaused ? "Play feedback movement" : "Pause feedback movement"));
     pauseButton.setAttribute("aria-pressed",String(userPaused));
   };
   const tick = (now) => {
@@ -58,7 +59,7 @@
     const dt = lastTime ? Math.min(45,now-lastTime) : 16;
     lastTime = now;
     if (!pauseState()) {
-      offset += dt * .026; // 26 pixels per second, to the right.
+      offset += dt * .038; // 38 pixels per second, clearly moving right.
       paint();
     }
     if (!document.hidden) frame = requestAnimationFrame(tick);
@@ -67,6 +68,11 @@
     if (!frame && !document.hidden) { lastTime = 0; frame = requestAnimationFrame(tick); }
   };
   const nudge = dir => {
+    if (reduced.matches) {
+      const card = set.querySelector(".voice");
+      viewport.scrollBy({left: ((card ? card.getBoundingClientRect().width : 360) + 18) * dir,behavior:"auto"});
+      return;
+    }
     userPaused = true;
     pausedByInteraction = false;
     const card = set.querySelector(".voice");
@@ -90,9 +96,9 @@
 
   viewport.addEventListener("mouseenter",() => { hovered = true; });
   viewport.addEventListener("mouseleave",() => { hovered = false; });
-  root.addEventListener("focusin",() => { focused = true; });
-  root.addEventListener("focusout",e => {
-    focused = !!(e.relatedTarget && root.contains(e.relatedTarget));
+  viewport.addEventListener("focusin",() => { focused = true; });
+  viewport.addEventListener("focusout",e => {
+    focused = !!(e.relatedTarget && viewport.contains(e.relatedTarget));
   });
   viewport.addEventListener("pointerdown",e => {
     if (e.pointerType === "mouse" && e.button !== 0) return;
