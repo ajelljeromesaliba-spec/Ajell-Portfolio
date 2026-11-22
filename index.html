@@ -21,7 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/hero-city.webp">
   <link rel="stylesheet" href="styles-v6.css">
-  <script defer src="script-v6.js"></script>
+  <link rel="stylesheet" href="styles-v7.css">
+  <script defer src="script-v7.js"></script>
 <style>
   /* Testimonials: readable full-length feedback, no expensive blur or parallax. */
   .testimonial-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.65fr);gap:clamp(32px,7vw,105px);align-items:end;margin-bottom:clamp(35px,5vw,70px)}
@@ -60,7 +61,7 @@
   <div class="reading-line" aria-hidden="true"></div>
   <div class="cursor-aura" aria-hidden="true"></div>
   <header class="site-header" id="top">
-    <a class="identity" href="#top" aria-label="Ajell Saliba, back to top"><span class="identity-mark">A<span class="slash">/</span>S</span><span class="identity-name">AJELL SALIBA <small>PERSONAL PORTFOLIO</small></span></a>
+    <a class="identity" href="#top" aria-label="Ajell Saliba, back to top"><span class="identity-mark"><img src="assets/ajell-mark.svg" alt="" width="50" height="50" decoding="async"></span><span class="identity-name">AJELL SALIBA <small>PERSONAL PORTFOLIO</small></span></a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a>
     </nav>
@@ -175,6 +176,18 @@
                 <span class="plate-checks"><span><i>✓</i> Form submission received</span><span><i>✓</i> CRM routing verified</span><span><i>✓</i> Calendar & owner checked</span><span><i>✓</i> Handoff documented</span></span>
                 <span class="plate-foot">VERIFIED BEFORE HANDOFF</span>
               </button>
+              <button type="button" class="depth-plate depth-plate-delivery" data-layer-index="3" aria-label="Explore final delivery and handoff scene">
+                <span class="plate-eyebrow"><span class="plate-dot"></span> 04 / DELIVERY <span>READY TO HAND OFF</span></span>
+                <strong>Make the handoff clear.</strong>
+                <span class="plate-delivery-surface">
+                  <span class="plate-delivery-route">WEBSITE <i>→</i> CRM <i>→</i> TEAM</span>
+                  <span class="plate-delivery-check"><i>✓</i> Forms and booking tested</span>
+                  <span class="plate-delivery-check"><i>✓</i> Contacts and routing checked</span>
+                  <span class="plate-delivery-check"><i>✓</i> Owners and next steps recorded</span>
+                  <span class="plate-delivery-status">HANDOFF PACKAGE <b>DOCUMENTED</b></span>
+                </span>
+                <span class="plate-foot">WORKFLOW ILLUSTRATION / NO CLIENT DATA</span>
+              </button>
             </div>
             <div class="depth-visual-tag" aria-hidden="true">ILLUSTRATIVE / INTERACTIVE IMPLEMENTATION FLOW</div>
           </div>
@@ -257,7 +270,7 @@
 
     <section class="contact-section section-pad" id="contact"><div class="layout-width contact-layout"><div data-reveal><span class="section-number">07 / GET IN TOUCH</span><h2>Let's make<br><em>it work.</em></h2><p>Open to remote opportunities and selected projects in web implementation, CRM automation, QA and client operations.</p><div class="contact-actions"><a href="mailto:ajellsaliba@gmail.com?subject=Portfolio%20inquiry" class="button button-primary magnet">SEND AN EMAIL <span>↗</span></a><button class="button button-outline" type="button" id="copyEmail">COPY EMAIL <span>⧉</span></button></div><span class="copy-feedback" role="status" aria-live="polite" id="copyFeedback"></span></div><aside class="contact-meta" data-reveal><div><span>EMAIL</span><a href="mailto:ajellsaliba@gmail.com">ajellsaliba@gmail.com ↗</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ajellsaliba/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajellsaliba ↗</a></div><div><span>BASED IN</span><strong>Cainta, Rizal · Philippines</strong></div><div><span>RÉSUMÉ</span><a href="resume-v2.html">View or print résumé ↗</a></div></aside></div></section>
   </main>
-  <footer class="footer"><div class="layout-width footer-inner"><a href="#top" class="footer-brand">A<span>/</span>S</a><p>© <span id="year">2026</span> AJELL SALIBA. PERSONAL PORTFOLIO.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div></footer>
+  <footer class="footer"><div class="layout-width footer-inner"><a href="#top" class="footer-brand" aria-label="Ajell Saliba, back to top"><img src="assets/ajell-mark.svg" width="40" height="40" alt=""><span>AJELL SALIBA</span></a><p>© <span id="year">2026</span> AJELL SALIBA. PERSONAL PORTFOLIO.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div></footer>
   <div class="site-toast" id="siteToast" role="status" aria-live="polite"></div>
 </body>
 </html>

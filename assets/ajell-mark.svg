@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="Ajell Saliba monogram">
+ <defs>
+   <linearGradient id="edge" x1="8" y1="12" x2="88" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#A7F5DD"/><stop offset=".46" stop-color="#CEFF8E"/><stop offset="1" stop-color="#66B9F8"/></linearGradient>
+   <linearGradient id="inner" x1="27" y1="31" x2="79" y2="80" gradientUnits="userSpaceOnUse"><stop stop-color="#F2FFF2"/><stop offset="1" stop-color="#91D2E8"/></linearGradient>
+ </defs>
+ <path d="M18 13H54L85 44V85H48L16 54V13Z" stroke="url(#edge)" stroke-width="2.5"/>
+ <path d="M16 52L50 18L83 52" stroke="url(#edge)" stroke-width="7" stroke-linejoin="round" stroke-linecap="square"/>
+ <path d="M32 54H68" stroke="#D1FFD2" stroke-width="5" stroke-linecap="square"/>
+ <path d="M72 34C62 27 43 28 36 37C28 48 40 54 52 57C70 61 72 67 64 74C57 82 41 79 32 70" stroke="url(#inner)" stroke-width="6" stroke-linecap="square"/>
+ <path d="M85 15V27M79 21H91" stroke="#CBF98A" stroke-width="2"/>
+ <circle cx="83" cy="83" r="3.5" fill="#CCFF91"/>
+</svg>
