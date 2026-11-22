@@ -1,0 +1,194 @@
+/* V30: desktop/tablet fidelity pass.
+   Portrait assets are 4:5; never fill a landscape viewport with a scaled cover crop.
+   Keep the existing <=620px mobile composition untouched. */
+
+/* Prevent grid content from widening columns on intermediate screens. */
+main > section, .container, .project-stack, .voices-grid { min-width: 0; }
+img { max-width: 100%; }
+:where(.project-copy,.secondary-project-copy,.case-detail,.voice-person,.exp-role) { min-width: 0; }
+
+@media (min-width: 621px) {
+  /* Remove the empty light strip beneath the final expertise cards. */
+  .expertise.section-pad { padding-bottom: clamp(55px, 5.5vw, 82px); }
+
+  /* Systems chapter: editorial split composition. The entire 4:5 portrait remains
+     visible at its natural aspect ratio and is never stretched across the screen. */
+  .systems-photo-sequence {
+    min-height: clamp(590px, 76svh, 760px);
+    display: flex;
+    align-items: center;
+    background:
+      radial-gradient(ellipse at 85% 45%, rgba(71, 117, 110, .22), transparent 47%),
+      linear-gradient(115deg, #071514 3%, #102321 65%, #081514 100%);
+    isolation: isolate;
+  }
+  .systems-photo-image {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: min(47vw, 760px);
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .systems-photo-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+    filter: contrast(1.045) saturate(.86);
+    transform: none !important;
+    will-change: auto;
+  }
+  .systems-photo-sequence::before {
+    z-index: 1;
+    background: linear-gradient(90deg,
+      rgba(4, 17, 17, .30) 0%,
+      rgba(4, 17, 17, .08) 50%,
+      rgba(4, 17, 17, .02) 100%);
+    pointer-events: none;
+  }
+  .systems-photo-copy {
+    position: relative;
+    z-index: 2;
+    width: min(1200px, calc(100% - 76px));
+    margin: 0 auto;
+    padding: clamp(75px, 9vh, 120px) 0;
+  }
+  .systems-photo-copy > p:not(.eyebrow) {
+    max-width: min(56%, 650px);
+    font-size: clamp(37px, 4.2vw, 63px);
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+  .systems-photo-copy > .eyebrow { max-width: 56%; }
+  .systems-photo-copy > a { position: relative; z-index: 3; }
+
+  /* Rain chapter: show the actual full portrait in a dedicated frame.
+     Keep rain, pinned scrolling and scene copy; remove destructive image zoom. */
+  .editorial-rain {
+    background: radial-gradient(ellipse at 74% 38%, #253035 0%, #0b1115 46%, #05090c 86%);
+  }
+  .editorial-rain .noir-sticky {
+    min-height: min(590px, 100svh);
+    background: transparent;
+  }
+  .editorial-rain .noir-image {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: min(52vw, 830px);
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .editorial-rain .noir-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+    filter: grayscale(100%) contrast(1.08);
+    transform: none !important;
+    will-change: auto;
+  }
+  .editorial-rain .noir-sticky::after {
+    background:
+      linear-gradient(90deg, rgba(3, 10, 12, .22), rgba(3, 10, 12, .04) 62%, transparent),
+      linear-gradient(0deg, rgba(3, 10, 12, .36), transparent 38%);
+  }
+  .rain-scene-copy {
+    bottom: clamp(78px, 15vh, 150px);
+    width: min(1200px, calc(100% - 76px));
+    margin: 0 auto;
+  }
+  .rain-scene-copy p {
+    max-width: min(51%, 660px);
+    font-size: clamp(39px, 4.6vw, 69px);
+    line-height: 1.13;
+    text-wrap: balance;
+  }
+
+  /* A 3:4 executive portrait already matches the image; don't scale/crop it. */
+  .experience-portrait img { transform: none !important; will-change: auto; }
+
+  /* Keep large project labels sharp while the interactive card still responds. */
+  .project-typography { transform: none !important; will-change: auto; }
+
+  /* All five recommendation cards get equal width and equal track height.
+     Keep full quotes, with attribution anchored to the bottom of each card. */
+  .voices-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .voices-grid > .voice {
+    grid-column: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    gap: 17px;
+    padding: clamp(26px, 2.6vw, 36px);
+  }
+  .voices-grid > .voice-reference {
+    grid-column: 1 / -1;
+    width: calc((100% - 18px) / 2);
+    justify-self: center;
+  }
+  .voice-feature blockquote,
+  .voice-reference blockquote,
+  .voice blockquote {
+    max-width: none;
+    font: 400 clamp(14px, 1.1vw, 16px)/1.72 var(--body);
+    overflow-wrap: break-word;
+  }
+  .voice-top { min-height: 20px; align-items: baseline; }
+  .voice-person { min-height: 79px; }
+  .voice-person > div { overflow-wrap: anywhere; }
+  .voice .quote-glyph { line-height: .65; }
+}
+
+/* Tablet: reserve space for legible copy without letting either photo cover it. */
+@media (min-width: 621px) and (max-width: 900px) {
+  .systems-photo-sequence { min-height: 570px; }
+  .systems-photo-image { width: 47%; }
+  .systems-photo-copy { width: calc(100% - 48px); }
+  .systems-photo-copy > p:not(.eyebrow) {
+    max-width: 52%;
+    font-size: clamp(34px, 4.8vw, 43px);
+  }
+  .systems-photo-copy > .eyebrow { max-width: 55%; }
+  .editorial-rain .noir-image { width: 49%; }
+  .rain-scene-copy { width: calc(100% - 48px); }
+  .rain-scene-copy p { max-width: 53%; font-size: clamp(35px, 4.8vw, 44px); }
+  .voices-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; }
+  .voices-grid > .voice { height: auto; min-height: 0; }
+  .voices-grid > .voice-reference { width: 100%; grid-column: auto; justify-self: stretch; }
+  .section-heading-grid, .experience .opening-line, .voices-section .opening-line { gap: 24px; }
+}
+
+/* Desktop: reduce aggressive parallax crop of the original 16:9 hero image. */
+@media (min-width: 821px) {
+  .hero-city-photo img {
+    transform: translate3d(0, clamp(0px, var(--v29-hero-shift, 0px), 20px), 0) scale(1.025) !important;
+    will-change: transform;
+  }
+}
+
+/* On smaller laptops, prevent large headline lines from colliding with photos. */
+@media (min-width: 901px) and (max-width: 1150px) {
+  .systems-photo-copy > p:not(.eyebrow) { max-width: 55%; font-size: clamp(38px, 4vw, 48px); }
+  .rain-scene-copy p { max-width: 49%; font-size: clamp(40px, 4.35vw, 51px); }
+}
+
+/* For readers who reduce motion, keep all photos absolutely static. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-city-photo img { transform: none !important; will-change: auto; }
+  .systems-photo-image img, .editorial-rain .noir-image img { transform: none !important; }
+}
