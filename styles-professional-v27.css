@@ -368,3 +368,36 @@ p{overflow-wrap:break-word}
 .rain-scene-copy p{font-size:clamp(40px,11vw,55px)}
 }
 @media(prefers-reduced-motion:reduce){.hero-city-photo img{animation:none;transform:none}}
+
+
+/* V28: restore the mobile hero's actual photo focal point, separate image from copy */
+@media (min-width:621px) and (max-width:800px){
+  .hero-city-photo img{object-position:23% 42%}
+  .hero::before{background:linear-gradient(90deg,rgba(3,16,17,.88),rgba(3,16,17,.48) 55%,rgba(3,16,17,.07)),linear-gradient(0deg,rgba(3,16,17,.60),transparent 50%)}
+}
+@media (max-width:620px){
+  .hero{position:relative;min-height:0;background:#071416;isolation:isolate}
+  .hero-city-photo{position:absolute;inset:0 0 auto;height:clamp(315px,43svh,380px);z-index:-2;overflow:hidden}
+  .hero-city-photo img{width:100%;height:100%;object-fit:cover;object-position:0% 35%;filter:brightness(.94) contrast(1.04) saturate(.85);animation:none;transform:none}
+  .hero::before{content:"";z-index:-1;inset:0;position:absolute;pointer-events:none;background:linear-gradient(180deg,rgba(4,14,16,0) 0%,rgba(4,14,16,.02) 24%,rgba(4,14,16,.17) 33%,rgba(4,14,16,.78) 42%,#071416 54%,#071416 100%)}
+  .hero-grid{display:flex;align-items:flex-end;min-height:0;height:auto;padding-top:clamp(264px,37svh,324px);padding-bottom:30px;gap:0}
+  .hero-copy{width:100%;max-width:100%;margin:0;position:relative;z-index:2}
+  .hero-kicker{font-size:9px;letter-spacing:.06em;margin:0 0 14px}
+  .hero h1{font-size:clamp(49px,12.6vw,63px);letter-spacing:-.087em;line-height:1.02;margin:0}
+  .hero h1 em{display:inline;letter-spacing:-.07em}
+  .hero-lead{max-width:365px;font-size:clamp(20px,5.3vw,25px);line-height:1.27;margin:17px 0 10px}
+  .hero-description{max-width:365px;font-size:13px;line-height:1.65;color:#d0e3db}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;width:100%;max-width:365px}
+  .hero-actions .button{min-width:0;min-height:47px;gap:6px;padding:12px 13px;font-size:11px;white-space:nowrap}
+  .hero-footnote{margin-top:18px;font:400 9px/1.6 var(--mono);letter-spacing:0;color:#aec3ba}
+  .hero-bottom{border-top:1px solid rgba(174,213,199,.17)}
+  .hero-bottom .container{padding:11px 0;gap:10px}
+  .hero-bottom span{font-size:8px;letter-spacing:.04em}
+}
+@media (max-width:360px){
+  .hero h1{font-size:clamp(44px,12vw,50px)}
+  .hero-lead{font-size:19px}
+  .hero-actions .button{font-size:10px;padding:11px 10px}
+  .hero-grid{padding-top:clamp(246px,36svh,300px)}
+}
+@media (prefers-reduced-motion:reduce){.hero-city-photo img{animation:none!important;transform:none!important}}
