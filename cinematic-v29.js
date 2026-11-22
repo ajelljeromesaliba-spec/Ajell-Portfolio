@@ -9,7 +9,7 @@
   const clamp = (value, low = 0, high = 1) => Math.min(high, Math.max(low, value));
   const chapters = [
     ['home', 'Introduction'], ['expertise', 'Expertise'],
-    ['selected-work', 'Projects'], ['case-studies', 'Case studies'],
+    ['systems-bridge', 'Technical delivery'], ['selected-work', 'Projects'], ['case-studies', 'Case studies'],
     ['rain-scene', 'Perspective'], ['experience', 'Experience'],
     ['voices', 'Recommendations'], ['about', 'About'], ['contact', 'Contact']
   ].map(([id, label]) => ({ id, label, el: document.getElementById(id) }))
