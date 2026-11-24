@@ -1,0 +1,63 @@
+/* Dark glassmorphism: layered light, frosted surfaces, restrained highlights. */
+:root {
+  --glass-base:#0a0d1c;
+  --glass-ink:#f4f6ff;
+  --glass-muted:#c0c9df;
+  --glass-accent:#b6d5ff;
+  --glass-line:rgba(197,217,255,.24);
+  --glass-edge:rgba(220,235,255,.44);
+  --glass-fill:linear-gradient(145deg,rgba(174,194,239,.16),rgba(73,88,135,.13) 55%,rgba(121,96,174,.12));
+  --glass-shadow:0 18px 44px -20px rgba(0,0,0,.66),inset 0 1px 0 rgba(255,255,255,.13);
+  --glass-ambient:radial-gradient(ellipse at 12% 12%,rgba(137,54,107,.28),transparent 45%),radial-gradient(ellipse at 84% 24%,rgba(68,131,212,.32),transparent 47%),radial-gradient(ellipse at 72% 92%,rgba(119,85,196,.23),transparent 48%),#0a0d1c;
+}
+@supports (backdrop-filter:blur(16px)) or (-webkit-backdrop-filter:blur(16px)) {
+  .glass-blur { -webkit-backdrop-filter:blur(16px) saturate(125%);backdrop-filter:blur(16px) saturate(125%); }
+}
+
+/* Personal portfolio homepage: preserve the existing imagery, scroll chapters and interactions. */
+body:has(#home){--night:#0a0d1c;--night2:#151a2e;--cream:#14192d;--ink:#f4f6ff;--mint:#bed6ff;--muted:#c0c9df;--line:var(--glass-line);--line-dark:var(--glass-line);--fx-glow:rgba(174,197,255,.20);background:var(--glass-ambient);color:var(--glass-ink);}
+body:has(#home) .site-header{background:linear-gradient(115deg,rgba(22,26,46,.90),rgba(41,48,79,.78),rgba(37,27,53,.87));border:1px solid var(--glass-line);border-radius:16px;box-shadow:0 12px 35px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.14);-webkit-backdrop-filter:blur(20px) saturate(125%);backdrop-filter:blur(20px) saturate(125%);}
+@media(min-width:801px){body:has(#home) .site-header{margin:10px clamp(16px,2vw,32px) 0;top:10px;}}
+body:has(#home) .desktop-nav a,body:has(#home) .brand small{color:var(--glass-muted);}
+body:has(#home) .desktop-nav .nav-contact{background:rgba(173,196,246,.12);border-color:var(--glass-line);border-radius:10px;}
+body:has(#home) .mobile-menu{background:rgba(15,19,36,.98);}
+#main .hero{background:var(--glass-ambient);}
+#main .hero-copy{padding:clamp(22px,3vw,42px);border:1px solid var(--glass-line);border-radius:22px;background:linear-gradient(145deg,rgba(97,116,165,.28),rgba(14,19,37,.67));box-shadow:var(--glass-shadow);-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);}
+#main .hero h1 em{color:#c4d8ff;}
+#main .hero-description,#main .hero-footnote{color:var(--glass-muted);}
+#main .hero-bottom{border-color:var(--glass-line);background:rgba(17,22,42,.60);}
+#main :is(.surface-light,.surface-dark,.experience,.voices-section,.contact-section){background:transparent;color:var(--glass-ink);}
+#main .surface-light :is(h2 em,.item-no,.case-title>.eyebrow,.text-link.dark-link,.eyebrow){color:#bed6ff;}
+#main .surface-light :is(.section-heading-grid>p,.expertise-item p,.case-detail>p,.case-title>p:not(.eyebrow),.about-text>p:not(.eyebrow)){color:var(--glass-muted);}
+#main .case-detail strong{color:#f1f4ff;}
+#main .expertise-grid,#main .case-list,#main .experience-list{border:0;gap:15px;}
+#main .case-list,#main .experience-list{display:grid;}
+#main :is(.expertise-item,.featured-project,.case-row,.experience-item,.contact-actions,.about-text){background:var(--glass-fill);border:1px solid var(--glass-line);border-radius:18px;box-shadow:var(--glass-shadow);}
+#main .case-row{padding:clamp(20px,3vw,36px);}
+#main .experience-item{padding:0 18px;}
+#main .about-text,#main .contact-actions{padding:clamp(20px,3vw,35px);}
+#main .expertise-item.v29-tilt:hover,#main .expertise-item:hover{background:linear-gradient(145deg,rgba(166,194,255,.23),rgba(103,91,170,.17));border-color:var(--glass-edge);}
+#main .expertise-item .item-no{color:#bcd4ff;text-shadow:none;}
+#main :is(.skill-tags span,.case-tag){background:rgba(157,180,236,.10);color:#d5e3ff;border-color:var(--glass-line);border-radius:999px;}
+#main .expertise-item:hover .skill-tags span{background:rgba(157,180,236,.18);border-color:var(--glass-edge);}
+#main .featured-project{overflow:hidden;}
+#main .featured-project:not(.featured-project-pawnova) .project-art{background:radial-gradient(ellipse at 60% 40%,rgba(104,154,230,.32),transparent 65%),radial-gradient(ellipse at 12% 85%,rgba(149,68,122,.23),transparent 65%),#14182b;border-color:var(--glass-line);}
+#main :is(.project-copy>p:not(.eyebrow),.secondary-project-copy>p:not(.eyebrow),.experience .opening-line>p,.voices-section .opening-line>p,.exp-body p,.contact-layout p:not(.eyebrow),.voice-person small,.voice-rating-note,.experience-note,.exp-date,.exp-role small){color:var(--glass-muted);}
+#main .voices-marquee-track .voices-grid>.voice,#main .voice{background:linear-gradient(145deg,rgba(67,83,126,.71),rgba(29,34,57,.88) 60%,rgba(47,35,76,.76));border-color:var(--glass-line);border-radius:18px;box-shadow:var(--glass-shadow);}
+#main .voices-section .voices-marquee::before{background:linear-gradient(90deg,#101426,transparent);}
+#main .voices-section .voices-marquee::after{background:linear-gradient(270deg,#101426,transparent);}
+#main .voices-marquee-controls button{background:rgba(135,161,223,.14);border-color:var(--glass-line);border-radius:10px;}
+#main .button-primary{background:linear-gradient(145deg,#f0f5ff,#bfd5ff 58%,#c2b8f2);border:1px solid #e0e8ff;color:#11192d;border-radius:12px;box-shadow:0 8px 24px rgba(115,152,234,.22),inset 0 1px #fff8;}
+#main .button-quiet{background:rgba(164,191,249,.12);color:#f3f6ff;border-color:var(--glass-line);border-radius:12px;}
+#main .button-primary:hover{background:#e6edff;}
+#main .experience-portrait{border-color:var(--glass-line);border-radius:16px;}
+body:has(#home) .site-footer{background:rgba(20,24,43,.84);border-color:var(--glass-line);}
+body:has(#home) .fx-orb.a{background:radial-gradient(circle,rgba(148,70,128,.38),transparent 68%);}
+body:has(#home) .fx-orb.b{background:radial-gradient(circle,rgba(103,152,236,.33),transparent 68%);}
+body:has(#home) .fx-progress{background:linear-gradient(90deg,#a6ccff,#b4a8f8,#e4eaff);}
+@media(max-width:800px){
+ body:has(#home) .site-header{border-radius:0;border-inline:0;}
+ #main .hero-copy{padding:18px;border-radius:16px;}
+ #main :is(.expertise-item,.featured-project,.case-row,.experience-item,.contact-actions,.about-text){border-radius:14px;}
+}
+@media(prefers-reduced-motion:reduce){#main .hero-copy{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(21,29,48,.94);}}
